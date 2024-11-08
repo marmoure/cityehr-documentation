@@ -75,7 +75,7 @@
 
   <xsl:template match="body" mode="body">
     <fo:block id="body-{generate-id()}">
-      <xsl:apply-templates select="p|section" mode="body"/>
+      <xsl:apply-templates select="p|section|ol|ul" mode="body"/>
     </fo:block>
   </xsl:template>
 
