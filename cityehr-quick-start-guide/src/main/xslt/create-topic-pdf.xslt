@@ -67,15 +67,19 @@
     <fo:block background-color="#A42420" color="#FFFFFF" font-weight="bold" font-size="14pt" display-align="center" margin-bottom="11pt" id="section-{generate-id()}">
       <fo:block margin-left="8pt"><xsl:value-of select="title"/></fo:block>
     </fo:block>
-    <xsl:apply-templates select="body" mode="body"/>
+    <xsl:apply-templates select="body|shortdesc" mode="body"/>
   </xsl:template>
   
-
+  <xsl:template match="shortdesc" mode="body">
+    <fo:block font-size="10pt" font-style="italic" space-after="6pt" color="#424242">
+      <xsl:apply-templates select="node()" mode="body"/>
+    </fo:block>
+  </xsl:template>
+  
   <!-- PAGE CONTENT -->
-
   <xsl:template match="body" mode="body">
     <fo:block id="body-{generate-id()}">
-      <xsl:apply-templates select="p|section|ol|ul" mode="body"/>
+      <xsl:apply-templates select="p|section|ol|ul|note" mode="body"/>
     </fo:block>
   </xsl:template>
 
@@ -83,7 +87,7 @@
     <fo:block background-color="#b08d57" color="#FFFFFF" font-weight="bold" font-size="10pt" display-align="center" margin-bottom="11pt" id="section-{generate-id()}">
       <fo:block margin-left="8pt"><xsl:value-of select="title"/></fo:block>
     </fo:block>
-    <xsl:apply-templates select="p|b|i|ol|ul|li|image|section" mode="body"/>
+    <xsl:apply-templates select="p|b|i|ol|ul|li|image|section|note" mode="body"/>
   </xsl:template>
 
   <xsl:template match="p" mode="body">
