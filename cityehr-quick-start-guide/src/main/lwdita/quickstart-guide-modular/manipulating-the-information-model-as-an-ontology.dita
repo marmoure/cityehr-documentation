@@ -34,18 +34,13 @@
             <ol>
                 <li> <p>You can now export the ontology by pressing the Export button in the top right - this
                     will take the ontology from the cityEHR database and return it to the browser as a zip
-                    file. Click on the button that says OWL. </p></li>
-            </ol>
-            <p><image href="images/admin-manage-info-model-export.png" format="image/png"><alt>Exporting Ontology models </alt></image>
-            </p>
-            <ol>
+                    file. Click on the button that says OWL. </p>
+                    <p><image href="images/admin-manage-info-model-export.png" format="image/png"><alt>Exporting Ontology models </alt></image></p>
+                </li>
                 <li>
                     <p>Save the file somewhere on your system, rename it to use a .zip extension and unzip to obtain the ontology (OWL/XML) file. If all has worked correctly, this file will be called export.xml. It is indeed an XML file, but it is in the OWL/XML vocabulary, so its useful to rename it to have a .owl extension.</p>
+                    <p><image href="images/admin-manage-info-model-export-dialogue.png" format="image/png"><alt>Renaming export file pop-up</alt></image></p>
                 </li>
-            </ol>
-            <p><image href="images/admin-manage-info-model-export-dialogue.png" format="image/png"><alt>Renaming export file pop-up</alt></image>
-            </p>
-            <ol>
                 <li>
                     <p>You can now open this ontology with Protege. Start Protege and select to open an existing ontology, navigate to the unzipped ontology from above and it should open. If you have renamed your file with a .owl extension then you should also be able to open it in Protege by double clicking on it.</p>
                 </li>

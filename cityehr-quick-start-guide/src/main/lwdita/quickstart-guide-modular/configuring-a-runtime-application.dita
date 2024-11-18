@@ -22,7 +22,7 @@
                 </li>
                 <li>
                     <p>Navigate to the Administration Page at the top right of the screen next to “Quit”. Click “Administration”. </p>
-                    <p><image href="images/admin-view-button.png" format="image/png"><alt>Primary Administative page</alt></image></p>
+                    <p><image href="images/admin-view-button.png" format="image/png"><alt>Primary Administrative page</alt></image></p>
                 </li>
                 <li>
                     <p>Now navigate to and click on “New Application” in the menu left of the screen. See below. </p>
@@ -74,7 +74,7 @@
             <ol>
                 <li>
                     <p>Navigate to Administration page and then to “New Application” under “System” in the menu on the left of the screen. </p>
-                    <p><image href="images/admin-new-app-nav.png" format="image/png"><alt>Navigating to NEw Application in Administration</alt></image></p>
+                    <p><image href="images/admin-new-app-nav.png" format="image/png"><alt>Navigating to New Application in Administration</alt></image></p>
                 </li>
                 <li>
                     <p>Enter the shipped application id “Elfin” or “Elfin2” or “Ponseti”. For this exercise, enter the application ID “Elfin2”.</p>
@@ -106,7 +106,7 @@
                     <p>You should now be able to select “Elfin 2” as an application from the log-in page </p>
                 </li>
                 <li>
-                    <p>Click Start and you will be navigated to the startup home page for Elfin2. </p>
+                    <p>Click Start and you will be navigated to the start-up home page for Elfin2. </p>
                 </li>
             </ol>
         </section>

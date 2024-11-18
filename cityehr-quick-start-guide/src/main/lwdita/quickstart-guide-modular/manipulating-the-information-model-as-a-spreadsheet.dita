@@ -53,19 +53,11 @@
                     lines). </p>
             </li>
             <li>
-                <p>In the column called FormId enter an identity for your form - this must use only
+                <p>In the column called Form Id enter an identity for your form - this must use only
                     the characters a-zA-Z0-9 (i.e. no spaces or special characters, including
-                    dashes). The form will use the DisplayName you enter in the second column - this is the title of the form and can contain any characters, including spaces and special characters. We will set our FormID to TestForm and Display Name to Test Form so that it is easily identifiable in the interface. </p>
+                    dashes). The form will use the Display Name you enter in the second column - this is the title of the form and can contain any characters, including spaces and special characters. We will set our Form ID to Test Form and Display Name to Test Form so that it is easily identifiable in the interface. </p>
+                <p><image href="images/featuredemo-spreadsheet.png" format="image/png"><alt>Specialty - Feature Demo.ods Information Model </alt></image></p>
             </li>
-        </ol>
-        <p> </p>
-        <ol id="ol_kxr_14v_vcc">
-            <li>
-                <p><image href="images/featuredemo-spreadsheet.png" format="image/png"><alt>Specialty - Feature Demo.ods Information Model </alt></image>
-                </p>
-            </li>
-        </ol>
-        <ol id="ol_mxr_14v_vcc">
             <li>
                 <p>The Rank column determines the order in which your form will be listed,
                     relative to the other forms already defined - enter a low number to see it near
@@ -92,20 +84,16 @@
                 <p>Once you are happy with your changes save the spreadsheet under a new name (its
                     important to do this in case you have made a mistake and need to revert to the
                     previous version). </p>
-            </li>
-        </ol>
-        <p> </p>
-        <p>Note - skip the next steps if you are instructed by your workshop organiser to load
+                <p><b>Note:</b> skip the next steps if you are instructed by your workshop organiser to load
             models directly as a spreadsheet file. </p>
-        <p> </p>
-        <ol id="ol_qxr_14v_vcc">
+            </li>
             <li>
                 <p>Having saved the new spreadsheet you now need to save it again, but this time in
                     XML format. To do that use Save As and select in the File type dialogue at the
-                    bottom of the screen for Microsoft Excel 2003 XML (.xml) - note that this option may be scrolled off the bottom of the list of file types when you first select the list. </p>
+                    bottom of the screen for Microsoft Excel 2003 XML (.XML) - note that this option may be scrolled off the bottom of the list of file types when you first select the list. </p>
             </li>
             <li>
-                <p>The save as XMl will take about 30 seconds. Once successfully saved, make sure
+                <p>The save as XML will take about 30 seconds. Once successfully saved, make sure
                     you close the spreadsheet since it is now in XML format and any additional
                     changes you make to it will not be properly recorded in the spreadsheet. (to
                     make further edits, reopen the .ods file and re-save as XML when you are done).
@@ -114,11 +102,8 @@
             <li>
                 <p>Back in the cityEHR interface, navigate to the Admin page and select Import
                     Information Model from the list of selections on the left. </p>
+                <p><image href="images/admin-info-model.png" format="image/png"><alt>Navigating to the Information Model page</alt></image></p>
             </li>
-        </ol>
-        <p><image href="images/admin-info-model.png" format="image/png"><alt>Navigating to the Information Model page</alt></image>
-        </p>
-        <ol id="ol_uxr_14v_vcc">
             <li>
                 <p>Browse to the information model spreadsheet you have just created and press to
                     open it. The file will now be 'uploaded' to the cityEHR server. Once that has
@@ -135,9 +120,8 @@
             </li>
             <li>
                 <p>If the model loaded successfully you can now navigate to the Patient Search page, find a patient, select Forms and you should see your new form available in the list of forms to create. </p>
+                <p><image href="images/forms-view-new.png" format="image/png"><alt>Forms page displaying new form </alt></image></p>
             </li>
         </ol>
-        <p><image href="images/forms-view-new.png" format="image/png"><alt>Forms page displaying new form </alt></image>
-        </p>
     </body>
 </topic>

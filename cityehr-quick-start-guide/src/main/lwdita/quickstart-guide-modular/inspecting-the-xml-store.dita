@@ -4,7 +4,7 @@
     <title>Inspecting the XML Store</title>
     <shortdesc>The native XML database used in cityEHR can be browsed using tools in the Admin page.
             This can be useful for understanding how data are stored and can be used by
-            administrators to remove information from the database.The facility to remove data must be used with extreme caution, since it may invalidate
+            administrators to remove information from the database. The facility to remove data must be used with extreme caution, since it may invalidate
             the overall structure of the xmlstore and/or compromise patient records.</shortdesc>
     <body>
         <section id="browsing-logical-databases">
@@ -26,29 +26,20 @@
                         on the left hand side of the display screen. </p>
                 </li>
                 <li>
-                    <p>There are two separate databases that can be used for the root of the browse:
-                    </p>
-                </li>
-                <li>
+                    <p>There are two separate databases that can be used for the root of the browse:</p>
                     <p>XML store — holds users and patient records for all installed applications </p>
-                </li>
-                <li>
                     <p>Audit log — holds audit data for all users </p>
                 </li>
                 <li>
                     <p>Click on the database store you would like to browse. We will select xmlstore for this example. </p>
+                    <p><image href="images/admin-browse-physical-database.png" format="image/png"><alt>Browse Physical Database Page</alt></image></p>
                 </li>
-            </ol>
-            <p><image href="images/admin-browse-physical-database.png" format="image/png"><alt>Browse Physical Database Page</alt></image>
-            </p>
-            <p> </p>
-            <p>The top level of the xmlstore database has collections for applications, systems, and
+                <li>
+                   <p>The top level of the xmlstore database has collections for applications, systems, and
                 users. Any cityEHR installation can support multiple applications and a single set of
                 users each of whom has access to one or more of the applications. </p>
-            <p><image href="images/admin-browse-physical-xmlstore.png" format="image/png"><alt>rowse Physical Database "xmlstore" Page</alt></image>
-            </p>
-            <p> </p>
-            <ol id="ol_yvr_14v_vcc">
+                    <p><image href="images/admin-browse-physical-xmlstore.png" format="image/png"><alt>browse Physical Database "xmlstore" Page</alt></image></p> 
+                </li>
                 <li>
                     <p>Click on the <i>users</i> link and you will see a list of all users registered
                         with cityEHR. If you are following these instructions for the first time then
@@ -59,22 +50,13 @@
                     <p>Click on the link for <i>admin</i> and the link <i>credentials</i> should be
                         displayed; click on that. Now click on the binoculars icon at the top right of
                         the viewing panel. </p>
+                    <p><image href="images/view-xmlstore.png" format="image/png"><alt>Viewing "xmlstore" Page Credentials</alt></image></p>
                 </li>
-            </ol>
-            <p> </p>
-            <p><image href="images/view-xmlstore.png" format="image/png"><alt>Viewing "xmlstore" Page Credentials</alt></image>
-            </p>
-            <ol id="ol_bwr_14v_vcc">
                 <li>
                     <p>You should now see an XML document in a new dialogue window on your screen. The
                         XML document contains the details for that user. </p>
+                    <p><image href="images/view-xmlstore-dialogue.png" format="image/png"><alt>XML Document of User Details</alt></image></p>
                 </li>
-            </ol>
-            <p> </p>
-            <p><image href="images/view-xmlstore-dialogue.png" format="image/png"><alt>XML Document of User Details</alt></image>
-            </p>
-            <p> </p>
-            <ol id="ol_dwr_14v_vcc">
                 <li>
                     <p>You can see the same XML for the user element that was contained in the users.xml file. </p>
                 </li>
@@ -86,27 +68,16 @@
                         located just to the right of the database selection drop down (don't confuse
                         this with pressing the back button in your web browser). See <i>Figure 100</i>
                     </p>
+                    <p><image href="images/view-xmlstore-return-button.png" format="image/png"><alt>Returning "xmlstore" Top Level by Clicking the Back Button</alt></image></p>
                 </li>
-            </ol>
-            <p> </p>
-            <p><image href="images/view-xmlstore-return-button.png" format="image/png"><alt>Returning "xmlstore" Top Level by Clicking the Back Button</alt></image>
-            </p>
-            <p> </p>
-            <ol id="ol_hwr_14v_vcc">
                 <li>
                     <p>Click on the applications link, then the link for ISO-13606-EHR_Extract-cityEHR.
                     </p>
                 </li>
                 <li>
-                    <p>This should now show the top level collections for the default cityEHR
-                        application. </p>
+                    <p>This should now show the top level collections for the default cityEHR application. </p>
+                    <p><image href="images/admin-browse-physical-toplevel.png" format="image/png"><alt>Top Level Collections for the Default cityEHR Application</alt></image></p>
                 </li>
-            </ol>
-            <p> </p>
-            <p><image href="images/admin-browse-physical-toplevel.png" format="image/png"><alt>Top Level Collections for the Default cityEHR Application</alt></image>
-            </p>
-            <p> </p>
-            <ol id="ol_kwr_14v_vcc">
                 <li>
                     <p>Click on the records link and you will now see a list of all patients with a
                         record stored for this application. </p>
@@ -115,27 +86,18 @@
                     <p>Click on the link for a patient and you will see the list of timestamped
                         compositions (XML documents in HL7 CDA format) that represent the events stored
                         in that patient's record. </p>
+                    <p><image href="images/admin-browse-physical-timestamp.png" format="image/png"><alt>Patient Timestamped Compositions</alt></image></p>
                 </li>
-            </ol>
-            <p><image href="images/admin-browse-physical-timestamp.png" format="image/png"><alt>Patient Timestamped Compositions</alt></image>
-            </p>
-            <ol id="ol_nwr_14v_vcc">
                 <li>
                     <p> Click on one of the timestamps and then click on the binoculars and you should
-                        now see an HL7 CDA document for that event in a dialogue box on your screen.
-                    </p>
+                        now see an HL7 CDA document for that event in a dialogue box on your screen.</p>
+                    <p><image href="images/admin-browse-physical-timestamp-xml.png" format="image/png"><alt>HL7 CDA Document for Selected Event</alt></image></p>
                 </li>
-            </ol>
-            <p> </p>
-            <p><image href="images/admin-browse-physical-timestamp-xml.png" format="image/png"><alt>HL7 CDA Document for Selected Event</alt></image>
-            </p>
-            <p> </p>
-            <ol id="ol_pwr_14v_vcc">
                 <li>
                     <p>You can continue exploring the database from the ISO-13606-EHR_Extract-cityEHR
-                        collection, looking at the contents stored for the informationModel (these are
+                        collection, looking at the contents stored for the information Model (these are
                         the OWL XML files that represent the models you imported) and the
-                        systemConfiguration which holds the templates for new forms, letters, etc as
+                        system Configuration which holds the templates for new forms, letters, etc as
                         well as the full data dictionary for the application. </p>
                 </li>
             </ol>

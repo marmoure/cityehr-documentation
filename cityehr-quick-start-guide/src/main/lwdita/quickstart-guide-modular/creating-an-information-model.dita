@@ -103,11 +103,11 @@
             </li>
             <li>
                 <p>Navigate to the “commonModel” option on the screen and ensure that the option #ISO-13606:Folder:cityEHRBase is selected (see below) </p>
-                <p><image href="images/admin-manage-app-param-cityehrbase.png" format="image/png"><alt></alt></image></p>
+                <p><image href="images/admin-manage-app-param-cityehrbase.png" format="image/png"><alt>Selecting the cityEHR Base folder</alt></image></p>
             </li>
             <li>
                 <p>Click Save and Navigate to Quit </p>
-                <p><image href="images/admin-manage-app-save-button.png" format="image/png"><alt></alt></image></p>
+                <p><image href="images/admin-manage-app-save-button.png" format="image/png"><alt>Saving Application Parameters</alt></image></p>
             </li>
             <li>
                 <p>Log back into your application </p>

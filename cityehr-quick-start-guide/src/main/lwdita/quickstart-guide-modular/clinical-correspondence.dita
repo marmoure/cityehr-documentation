@@ -34,17 +34,22 @@
                 </strow>
             </simpletable>
             <p/> 
-            <p>Note that the components with the referenced identifiers must be present in the Letter
-                with which the template is associated – if not, then the referenced field will be blank.
-                When developing templates you can find the identifiers to use by accessing a Letter in
-                cityEHR running in debugging mode. Click the checkbox to Show Ids and the identifiers
-                for each component will be displayed. </p>
+            <p>Note that the components with the referenced identifiers must be present in the
+                Letter with which the template is associated – if not, then the referenced field
+                will be blank. When developing templates you can find the identifiers to use by
+                accessing a Letter in cityEHR running in debugging mode. Click the checkbox to Show
+                Ids and the identifiers for each component will be displayed. </p>
             <p><image href="images/letters-ids-view.png" format="image/png"><alt>Show Ids When Running cityEHR in Debugging Mode</alt></image>
             </p>
         </section>
         <section id="Importing-and-Associating-a-Template">
             <title>Importing and Associating a Template</title>
-            <p> Letter Templates can be imported from the Administration page by selecting the option for Manage Letters | Manage Letter Templates. This page lists all currently loaded templates and you can add a new one by pressing the + button in the top right menu and then browsing to the file location of the word processor document you with to import. Pressing the red X button next to any existing template in the list allows you to change (re-import) the associated word processor file. </p>
+            <p>Letter Templates can be imported from the Administration page by selecting the option
+                for Manage Letters | Manage Letter Templates. This page lists all currently loaded
+                templates and you can add a new one by pressing the + button in the top right menu
+                and then browsing to the file location of the word processor document you with to
+                import. Pressing the red X button next to any existing template in the list allows
+                you to change (re-import) the associated word processor file. </p>
             <p/> 
             <p><image href="images/admin-manage-letter-temps.png" format="image/png"><alt>Letter templates</alt></image>
             </p>

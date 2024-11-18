@@ -8,7 +8,7 @@
             <title>Log On</title>
             <p> With Apache Tomcat and cityEHR installed, the log-on page of cityEHR can be accessed with the Firefox web browser using the address <i>http://localhost:8080/cityehr </i> if you have the Tomcat server running on your local machine or if running on a remote server, substitute the IP address of your server for 'localhost'. </p>
             <p><b>Note that cityEHR 1.7 must be accessed using Firefox only (IE 11, Edge, Chrome and Safari will be supported from version 2.0 onwards).</b> </p>
-            <p>The base cityEHR installation has a single default user set up with the credentials </p>
+            <p>The base cityEHR installation has a single default user set up with the credentials</p>
             <p>username: admin </p>
             <p>password: password </p>
             <p><image href="images/log-on-page.png" format="image/png"><alt>cityEHR Log-on Page</alt></image></p>
@@ -16,7 +16,7 @@
             <p> </p>
 
             
-            <p><image href="images/initalize-new-cityehr-installation.png" format="image/png"><alt>Initialize New cityEHR Installation</alt></image></p>
+            <p><image href="images/initialize-new-cityehr-installation.png" format="image/png"><alt>Initialize New cityEHR Installation</alt></image></p>
             <p> </p>
             <p>cityEHR will now run through a sequence of steps to build the default application; while this is in progress the screen will look like the one displayed in the Figure below. It take a minute or so for this process to complete, so you will need to wait while before continuing. </p>
             <p> </p>
@@ -64,7 +64,7 @@
         <section id="running-in-debug-mode">
             <title>Running in Debug Mode</title>
             <p>cityEHR can run in a debugging mode in which you can see additional details of the underlying information structures, particularly the HL7 CDA documents that are used to represent clinical information in the patient record. </p>
-            <p>To run in debug mode for a single session, add the parameter ?mode=debug to the cityEHR URL, so for example </p>
+            <p>To run in debug mode for a single session, add the parameter <b>?mode=debug</b> to the cityEHR URL, so for example </p>
             <p> <i>http://localhost:8080/cityehr/?mode=debug</i> </p>
             <p> </p>
             <p>This will run just the current session in debug mode. </p>
