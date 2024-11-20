@@ -72,14 +72,6 @@
       <xsl:apply-templates mode="body"/>
     </xsl:copy>
   </xsl:template>
-  
-<!--  <xsl:template match="image" mode="body">
-    <figure>
-      <img src="{@href}">
-      <xsl:attribute name="width" select="960"/>
-      </img>
-    </figure>
-  </xsl:template>-->
 
   <xsl:template match="image[alt]" mode="body">
     <figure>
@@ -91,6 +83,24 @@
       </img>
       <figcaption><xsl:value-of select="alt"/></figcaption>
     </figure>
+  </xsl:template>
+  
+  <xsl:template match="simpletable" mode="body">
+    <table style="border-collapse: collapse" >
+      <xsl:apply-templates select="strow" mode="body"/>
+    </table>
+  </xsl:template>
+  
+  <xsl:template match="strow" mode="body">
+    <tr>
+      <xsl:apply-templates select="stentry" mode="body"/>
+    </tr>
+  </xsl:template>
+  
+  <xsl:template match="stentry" mode="body">
+    <td style="padding: 4px; border: 1px solid black;">
+      <xsl:apply-templates select="node()" mode="body"/>
+    </td>
   </xsl:template>
 
   <xsl:template match="image[empty(alt)]" mode="body">
@@ -110,7 +120,7 @@
 
   <xsl:template match="section" mode="body">
     <section>
-      <xsl:apply-templates select="title|p|b|i|ol|ul|li|image|section" mode="body"/>
+      <xsl:apply-templates select="title|p|b|i|ol|ul|li|image|section|simpletable" mode="body"/>
     </section>
   </xsl:template>
 

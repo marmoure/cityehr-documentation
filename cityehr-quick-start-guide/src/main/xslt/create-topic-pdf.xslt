@@ -79,15 +79,41 @@
   <!-- PAGE CONTENT -->
   <xsl:template match="body" mode="body">
     <fo:block id="body-{generate-id()}">
-      <xsl:apply-templates select="p|section|ol|ul|note" mode="body"/>
+      <xsl:apply-templates select="p|section|ol|ul|note|simpletable" mode="body"/>
     </fo:block>
+  </xsl:template>
+  
+  <xsl:template match="simpletable" mode="body">
+    <fo:table table-layout="fixed" width="100%" border-collapse="collapse" border="1pt solid black">
+      <!-- column widths -->
+      <fo:table-column column-width="40%"/>
+      <fo:table-column column-width="60%"/>
+      <!-- table body -->
+      <fo:table-body>
+        <xsl:apply-templates select="strow" mode="body"/>
+      </fo:table-body>
+    </fo:table>
+  </xsl:template>
+
+  <xsl:template match="strow" mode="body">
+    <fo:table-row>
+      <xsl:apply-templates select="stentry" mode="body"/>
+    </fo:table-row>
+  </xsl:template>
+  
+  <xsl:template match="stentry" mode="body">
+    <fo:table-cell border="1pt solid black" padding="4pt">
+      <fo:block>
+        <xsl:apply-templates select="node()" mode="body"/>
+      </fo:block>
+    </fo:table-cell>
   </xsl:template>
 
   <xsl:template match="section" mode="body">
     <fo:block background-color="#b08d57" color="#FFFFFF" font-weight="bold" font-size="10pt" display-align="center" margin-bottom="11pt" id="section-{generate-id()}">
       <fo:block margin-left="8pt"><xsl:value-of select="title"/></fo:block>
     </fo:block>
-    <xsl:apply-templates select="p|b|i|ol|ul|li|image|section|note" mode="body"/>
+    <xsl:apply-templates select="p|b|i|ol|ul|li|image|section|note|simpletable" mode="body"/>
   </xsl:template>
 
   <xsl:template match="p" mode="body">
