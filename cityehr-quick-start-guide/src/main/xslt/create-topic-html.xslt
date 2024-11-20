@@ -87,17 +87,31 @@
   
   <xsl:template match="simpletable" mode="body">
     <table style="border-collapse: collapse" >
-      <xsl:apply-templates select="strow" mode="body"/>
+      <xsl:apply-templates select="node()" mode="body"/>
     </table>
+  </xsl:template>
+  
+  <xsl:template match="sthead" mode="body">
+    <th>
+      <xsl:apply-templates select="node()" mode="table-head"/>
+    </th>
   </xsl:template>
   
   <xsl:template match="strow" mode="body">
     <tr>
-      <xsl:apply-templates select="stentry" mode="body"/>
+      <xsl:apply-templates select="node()" mode="table-row"/>
     </tr>
   </xsl:template>
   
-  <xsl:template match="stentry" mode="body">
+  <xsl:template match="stentry" mode="table-head">
+    <td style="padding: 4px; border: 1px solid black;">
+      <b>
+        <xsl:apply-templates select="node()" mode="body"/>
+      </b>
+    </td>
+  </xsl:template>
+  
+  <xsl:template match="stentry" mode="table-row">
     <td style="padding: 4px; border: 1px solid black;">
       <xsl:apply-templates select="node()" mode="body"/>
     </td>
