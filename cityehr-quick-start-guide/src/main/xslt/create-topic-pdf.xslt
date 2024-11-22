@@ -85,10 +85,9 @@
   
   <xsl:template match="simpletable" mode="body">
     <fo:table table-layout="fixed" width="100%" border-collapse="collapse" border="1pt solid black">
-      <!-- column widths -->
-      <fo:table-column column-width="40%"/>
-      <fo:table-column column-width="60%"/>
-      <!-- table body -->
+      <xsl:for-each select="strow[1]/stentry">
+        <fo:table-column/>  
+      </xsl:for-each>
       <fo:table-body>
         <xsl:apply-templates select="strow" mode="body"/>
       </fo:table-body>
