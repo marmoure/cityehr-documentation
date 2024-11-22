@@ -139,7 +139,7 @@
   </xsl:template>
 
   <xsl:template match="title[parent::section/parent::body]" mode="body">
-    <h2><xsl:value-of select="."/></h2>
+    <h2 style="color:#808080;"><xsl:value-of select="."/></h2>
   </xsl:template>
 
   <xsl:template match="title[parent::section/parent::section/parent::body]" mode="body">
