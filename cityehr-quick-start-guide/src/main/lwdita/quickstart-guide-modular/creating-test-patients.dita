@@ -3,61 +3,47 @@
 <topic id="creating-test-patients">
     <title>Creating Test Patients</title>
     <body>
-        <p>To continue exploring cityEHR you will need a larger sample of test patients – these can
-            be generated using functions available on the Administration page, which is accessed by
-            pressing the Administration button on the main system menu (top right of the page). </p>
+        <p>To explore cityEHR further, you will need a larger sample of test patients. These can be generated using the functions available on the <b>Administration</b> page, which is accessed by clicking the <b>Administration</b> button in the main system menu (top right of the page).</p>
         <ol>
             <li>
-                <p>On the Administration page, in the menu in the left hand pane, select the menu
-                    option “Database” and then the sub-task for ‘Generate Test Data’. </p>
+                <p>On the <b>Administration</b> page, select the <b>Database</b> option from the left-hand menu, and then click <b>Generate Test Data</b>.</p>  
             </li>
             <li>
-                <p>Press the Browse button to load a file containing a sample patient record. </p>
+                <p>Click the <b>Browse</b> button to load a file containing a sample patient record.</p>
                 <p><image href="images/admin-generate-test-data.png" format="image/png"><alt>Generating Test Data</alt></image></p>
             </li>
             <li>
-                <p>Press the ‘Browse’ button and navigate to your downloaded User Resources Folder.
-                    Select the file called: <i>EHR_Extract-TimothyAbernathy.xml</i> (If you want to see
-                    what this file looks like, then you can open it separately using a programmers
-                    file editor or plain text editor). </p>
-            </li>
-            <li>
-                <p>The User Resources Folder is the folder you created when you downloaded User
-                    resources in the previous section. </p>
-            </li>
-            <li>
-                <p>After uploading the <i>EHR_Extract-TimothyAbernathy.xml</i> file you should see the full set of options for generating test data, as shown in the figure below </p>
+                <p>Navigate to your downloaded <b>User Resources</b> folder and select the file named <i>EHR_Extract-TimothyAbernathy.xml</i>. (You can open this file separately using a text editor if you wish to view its contents.)</p>
                 <p><image href="images/user-resources-timabernathy.png" format="image/png"><alt>Locating “EHR_Extract-TimothyAbernathy.xml” in User Resources Folder</alt></image></p>
+            </li>
+            <li>
+                <p>The <b>User Resources</b> folder was created when you downloaded resources in the <i>verifying the Installation</i> section.</p>
+            </li>
+            <li>
+                <p>After uploading the <i>EHR_Extract-TimothyAbernathy.xml</i> file, you will see a range of options for generating test data, as shown below:</p>
                 <p><image href="images/admin-generate-test-data-param.png" format="image/png"><alt>Generate Test Data Parameters, Following File Upload</alt></image></p>
             </li>
             <li>
-                <p>By default, the parameters are set to generate 10 test records, split evenly
-                    between male, female and other gender categories, aged between 18 and 65. </p>
+                <p>By default, the system generates 10 test records evenly split between male, female, and other gender categories, aged between 18 and 65.</p>  
             </li>
             <li>
-                <p>To test these features this example will generate records for Male and Female patients, so you can change the percentages to 50 in each of these columns, and percentages of 0 to the rest (Non-binary, Intersex, and Unknown). The actual number of records to be generated will change as you change the percentages (and an error message will appear whenever the percentages don’t add up to 10). If you would like, once you have generated the 10 records, you can keep the same settings and try generating 100 records. However, be aware that it can take up to 5 seconds to generate each record, so 100 records can take over 5 minutes to complete. </p>
+                <p>To customize, adjust the percentages in the gender columns (e.g., set <b>Male</b> and <b>Female</b> to 50% each and the others to 0%). Ensure the percentages total 100%; otherwise, an error message will appear. Optionally, generate 100 records instead of 10, but note that it may take up to 5 seconds per record, potentially exceeding 5 minutes for 100 records.</p>
+                <p><b>Note: </b>The Generate button will only be active when the percentages across all categories add up to 100%</p>
             </li>
             <li>
-                <p>Note that the button to generate test patients will only be active when the
-                    percentages across all categories add up to 100% </p>
-            </li>
-            <li>
-                <p>In the columns for Male and Female patients, change the Forename selection to
-                    Male Forename and Female Forename as appropriate. </p>
+                <p>Set the <b>Forename</b> selection to <b>Male Forename</b> and <b>Female Forename</b> in their respective columns.</p>
                 <p><image href="images/admin-generate-test-data-param-filled.png" format="image/png"><alt>Generate Test Data with Parameters Set</alt></image></p>
             </li>
             <li>
-                <p>Once you are happy with the parameters, press the small button on the right hand
-                    side of the page to generate the test records. You will need to wait a while
-                    until this process is finished. </p>
+                <p>Once the parameters are configured, click the small <b>Generate</b> button on the right-hand side to create the test records. This process may take some time to complete.</p>
                 <p><image href="images/admin-generate-test-data-button.png" format="image/png"><alt>Generating Test Data</alt></image></p>
             </li>
             <li>
-                <p> Once the test data is generated, your screen will look like the figure below.</p>
+                <p>After the records are generated, your screen will display a confirmation, as shown below:</p>
                 <p><image href="images/admin-generate-test-data-done.png" format="image/png"><alt>Generating Test Data Completed </alt></image></p>
             </li>
             <li>
-                <p>Now you can press the Dashboard button in the main System Menu (top of the page) to leave the Admin page and view the Dashboard, which should now show that you have the new records loaded. </p>
+                <p>Click the <b>Dashboard</b> button in the main system menu to leave the <b>Administration</b> page. The <b>Dashboard</b> will now reflect the newly loaded records.</p>
                 <p><image href="images/dashboard-updated-patient-num.png" format="image/png"><alt>Updated Dashboard with Generated Test Data </alt></image></p>
             </li>
         </ol>

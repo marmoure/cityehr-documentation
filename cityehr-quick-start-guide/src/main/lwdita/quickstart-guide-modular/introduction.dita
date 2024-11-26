@@ -2,33 +2,25 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN" "topic.dtd">
 <topic id="introduction">
     <title>Introduction</title>
-    <shortdesc>This document describes the basic setup and features of the cityEHR starting from a
-        vanilla installation. </shortdesc>
+    <shortdesc>This document describes the basic setup and features of the cityEHR starting from a standard, out-of-the-box installation.</shortdesc>
     <body>
-        <p>If you don't have an installation of cityEHR yet then you need to follow the instructions in the cityEHR Installation Guide. </p>
-        <p>With the standard installation running under Tomcat, and if you have the Tomcat server
-                running on your local machine, cityEHR will be available on the URL
-                    <i>localhost:8080/cityehr </i> or if running on a remote server, substitute the
-                IP address of your server for 'localhost'. </p>
-        <p>cityEHR is an XML application which uses declarative code only: xhtml, XML, XForms, XSLT
-            and XQuery. The source code can be found at <i>CATALINA_HOME/webapps/cityehr/WEB-INF/resources/apps/ehr </i></p>
-        <p>where CATALINA_HOME is the location of your Tomcat installation. If you have cityEHR
-            installed with a different application server or you have changed the locations of the
-            standard installation then you will need to find where the <i>resources/apps/ehr</i>
-            directory is located in your installation. </p>
-        <p>The remaining sections of this Guide show how to register patients, enter and view
-            clinical data, annotate a patient record, view and plot historical data, find patients,
-            create cohorts of patients and export their data. </p>
-        <p>It also covers some administration functions (there are many such functions and only a
-            few of them are covered in this guide): accessing user resources, generating test data,
-            managing users and creating export data sets. </p>
-        <p>cityEHR is designed to be completely configurable, allowing clinicians to create
-            enterprise-scale, secure health records systems that gather clinical data to recognised
-            international standards, yet with data sets defined locally, by clinicians themselves. </p>
-        <p>So the Quick Start Guide also shows you how to create a new EHR system from scratch,
-            including creation of the information model, configuration of patient labels, patient
-            search criteria and cohort selection terms. </p>
-     
+        <p>If you don't have an installation of cityEHR yet you should refer to the cityEHR Installation Guide. </p>
+        <p>If you have a standard installation running under Tomcat on your local machine, you can access cityEHR at <i>localhost:8080/cityehr</i>. For remote servers, replace '<i>localhost</i>' with the server's IP address.</p>
+        <p>cityEHR is an XML-based application that uses only declarative programming languages, including XHTML, XML, XForms, XSLT, and XQuery, ensuring simplicity and flexibility in customization.</p>
+        <p>The source code is located at <i>CATALINA_HOME/webapps/cityehr/WEB-INF/resources/apps/ehr</i>. Here, CATALINA_HOME refers to the base directory of your Tomcat installation.</p>
+        <p>If you have cityEHR installed with a different application server or you have changed the locations of the standard installation then you will need to find where the <i>resources/apps/ehr</i> directory is located in your installation. </p>
+        <p>The remaining sections of this Guide cover;</p>
+        <ul>
+            <li><p>Registering Patients</p></li>
+            <li><p>Entering and viewing clinical data</p></li>
+            <li><p>Annotating patient records</p></li>
+            <li><p>Viewing and plotting historical data</p></li>
+            <li><p>Finding patients</p></li>
+            <li><p>Creating cohorts of patients and exporting their data</p></li>
+        </ul>
+        <p>This guide also introduces key administrative functions, such as accessing user resources, generating test data, managing users, and creating export data sets. Note that only a subset of administration functions is covered here. </p>
+        <p>cityEHR is fully configurable, enabling clinicians to design secure, enterprise-scale health record systems that meet international standards while supporting locally defined data sets.</p>
+        <p>Additionally, this Quick Start Guide demonstrates how to create a new EHR system from scratch, including building the information model, configuring patient labels, defining search criteria, and establishing cohort selection terms.</p>
 </body>
 </topic>
 
