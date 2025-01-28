@@ -20,7 +20,7 @@
   <!-- PARAMETER - the path to the folder where you want to output the Topic HTML files -->
   <xsl:param name="output-folder" as="xs:string" select="com:parent-path(com:document-uri(/map))"/>
   
-  <!-- PARAMETER - specifing a PDF file version of this to present a download link for -->
+  <!-- PARAMETER - specifying a PDF file version of this to present a download link for -->
   <xsl:param name="download-pdf-filename" as="xs:string?"/>
   
   <xsl:variable name="authors" as="xs:string+" select="('John Chelsom', 'Stephanie Cabrera', 'Catriona Hopper', 'Jennifer Ramirez')"/>
