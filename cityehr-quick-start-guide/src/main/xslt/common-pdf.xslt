@@ -68,7 +68,7 @@
             <xsl:if test="$producer">
               <pdf:Producer><xsl:value-of select="$producer"/></pdf:Producer>
             </xsl:if>
-            <xmp:CreationDate><xsl:value-of select="pcom:iso8601-dateTime-utc($created)"/></xmp:CreationDate>
+            <xmp:CreateDate><xsl:value-of select="pcom:iso8601-dateTime-utc($created)"/></xmp:CreateDate>
             <xmp:ModifyDate><xsl:value-of select="pcom:iso8601-dateTime-utc($modified)"/></xmp:ModifyDate>
           </rdf:Description>
         </rdf:RDF>
