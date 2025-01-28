@@ -16,6 +16,12 @@
   <xsl:import href="create-topic-html.xslt"/>
   
   <xsl:output method="html" version="5.0" encoding="UTF-8" indent="yes"/>
+
+  <!-- PARAMETER - the version number of the generated document -->
+  <xsl:param name="version" required="yes" as="xs:string"/>
+
+  <!-- PARAMETER - the revision date and time of the generated document -->
+  <xsl:param name="revision" required="no" as="xs:dateTime" select="current-dateTime()"/>
   
   <!-- PARAMETER - the path to the folder where you want to output the Topic HTML files -->
   <xsl:param name="output-folder" as="xs:string" select="com:parent-path(com:document-uri(/map))"/>
@@ -24,7 +30,6 @@
   <xsl:param name="download-pdf-filename" as="xs:string?"/>
   
   <xsl:variable name="authors" as="xs:string+" select="('John Chelsom', 'Stephanie Cabrera', 'Catriona Hopper', 'Jennifer Ramirez')"/>
-  <xsl:variable name="map-date" as="xs:date" select="xs:date('2023-08-05Z')"/>
 
   <!-- NOTE(AR) used for building the top-nav and bottom-nav -->
   <xsl:variable name="map-uri" as="xs:string" select="com:document-uri(/map)"/>
@@ -35,8 +40,9 @@
       <head>
         <xsl:call-template name="hcom:meta">
           <xsl:with-param name="authors" select="$authors"/>
-          <xsl:with-param name="created-date" select="$map-date"/>
-          <xsl:with-param name="modified-date" select="$map-date"/>
+          <xsl:with-param name="version" select="$version"/>
+          <xsl:with-param name="created-dateTime" select="$revision"/>
+          <xsl:with-param name="modified-dateTime" select="$revision"/>
         </xsl:call-template>
       </head>
       <body about="">
@@ -47,7 +53,7 @@
           <xsl:apply-templates select="topicmeta" mode="cover-page"/>
         </div>
         <article typeof="cc:Work">
-          <time datetime="{$map-date}" pubdate="pubdate"></time>
+          <time datetime="{$revision}" pubdate="pubdate"></time>
           <xsl:apply-templates select="topicmeta" mode="body"/>
           <xsl:if test="exists($download-pdf-filename)">
             <div id="download-pdf-version"><a href="{$download-pdf-filename}">Download PDF version</a></div>
@@ -63,6 +69,10 @@
   </xsl:template>
   
   <xsl:template match="topicmeta" mode="cover-page">
+    <div id="version" style="font-size: 9pt;">
+      <p><b>Version:</b> <xsl:value-of select="$version"/></p>
+      <p><b>Revision:</b> <xsl:value-of select="hcom:simple-date-utc-from-dateTime($revision)"/></p>
+    </div>
     <div id="license" style="display: flex; align-items: center; justify-content: left">
       <div id="license-image" style="max-width: 100%; max-height:100%;">
         <a rel="license" href="{othermeta[@name eq 'dcterms:license'][2]/@content}"><img src="images/by-nc-sa.png" width="30%"/></a>
