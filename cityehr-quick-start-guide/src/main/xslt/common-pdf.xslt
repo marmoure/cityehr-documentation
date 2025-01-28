@@ -106,7 +106,8 @@
     <xsl:param name="title" as="xs:string" required="yes"/>
     <xsl:param name="sub-title" as="xs:string?" required="no"/>
     <xsl:param name="authors" as="xs:string+" required="yes"/>
-    <xsl:param name="date" as="xs:date" required="no" select="current-date()"/>
+    <xsl:param name="version" as="xs:string" required="no" select="'1.0.0-SNAPSHOT'"/>
+    <xsl:param name="revision" as="xs:dateTime" required="no" select="current-dateTime()"/>
     <fo:page-sequence master-reference="PageMaster" id="cover-page-sequence">
       <xsl:apply-templates mode="cover-page-sequence-setup"/>
       <fo:static-content flow-name="xsl-region-before">
@@ -127,7 +128,8 @@
           <fo:block font-size="14pt"><xsl:value-of select="$title"/></fo:block>
           <fo:block font-size="14pt"><xsl:value-of select="$sub-title"/></fo:block>
           <fo:block font-size="12pt"><xsl:value-of select="com:format-inline-text-list($authors)"/></fo:block>
-          <fo:block font-size="12pt"><xsl:value-of select="pcom:simple-date-utc($date)"/></fo:block>          
+          <fo:block font-size="9pt"><fo:inline font-weight="bold">Version: </fo:inline><xsl:value-of select="$version"/></fo:block>
+          <fo:block font-size="9pt"><fo:inline font-weight="bold">Revision: </fo:inline><xsl:value-of select="pcom:simple-date-utc-from-dateTime($revision)"/></fo:block>
         </fo:block>
       </fo:flow>
     </fo:page-sequence>
@@ -220,9 +222,9 @@
     Adjust a date to UTC timezone and then formats it as
     nth Month Year.
   -->
-  <xsl:function name="pcom:simple-date-utc" as="xs:string">
-    <xsl:param name="date" as="xs:date" required="yes"/>
-    <xsl:sequence select="format-date(adjust-date-to-timezone($date, xs:dayTimeDuration('PT0H')), '[D1o] [MNn] [Y0001]')"/>
+  <xsl:function name="pcom:simple-date-utc-from-dateTime" as="xs:string">
+    <xsl:param name="dateTime" as="xs:dateTime" required="yes"/>
+    <xsl:sequence select="format-dateTime(adjust-dateTime-to-timezone($dateTime, xs:dayTimeDuration('PT0H')), '[D1o] [MNn] [Y0001]')"/>
   </xsl:function>
 
 </xsl:stylesheet>
