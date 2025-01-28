@@ -17,11 +17,16 @@
   <xsl:import href="common.xslt"/>
   <xsl:import href="common-pdf.xslt"/>
   <xsl:import href="create-topic-pdf.xslt"/>
-  
+
   <xsl:output encoding="UTF-8" omit-xml-declaration="no" indent="yes"/>
+
+  <!-- PARAMETER - the version number of the generated document -->
+  <xsl:param name="version" required="yes" as="xs:string"/>
+
+  <!-- PARAMETER - the revision date and time of the generated document -->
+  <xsl:param name="revision" required="no" as="xs:dateTime" select="current-dateTime()"/>
   
   <xsl:variable name="authors" as="xs:string+" select="('John Chelsom', 'Stephanie Cabrera', 'Catriona Hopper', 'Jennifer Ramirez')"/>
-  <xsl:variable name="map-date" as="xs:date" select="xs:date('2024-10-05Z')"/>
   
   <xsl:template match="document-node()">
     <xsl:call-template name="pcom:fo-root"/>
@@ -70,7 +75,8 @@
       <xsl:with-param name="title" select="topicmeta/navtitle"/>
       <xsl:with-param name="sub-title">Open Health Informatics</xsl:with-param>
       <xsl:with-param name="authors" select="$authors"/>
-      <xsl:with-param name="date" select="$map-date"/>
+      <xsl:with-param name="version" select="$version"/>
+      <xsl:with-param name="revision" select="$revision"/>
     </xsl:call-template>
   </xsl:template>
   

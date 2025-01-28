@@ -16,19 +16,20 @@
 
   <xsl:template name="hcom:meta">
     <xsl:param name="authors" as="xs:string+" required="yes"/>
-    <xsl:param name="created-date" as="xs:date?" required="no"/>
-    <xsl:param name="modified-date" as="xs:date?" required="no"/>
+    <xsl:param name="version" as="xs:string" required="yes"/>
+    <xsl:param name="created-dateTime" as="xs:dateTime?" required="no"/>
+    <xsl:param name="modified-dateTime" as="xs:dateTime?" required="no"/>
     <xsl:apply-templates select="topicmeta|title" mode="metadata"/>
     <xsl:call-template name="hcom:authors-meta">
       <xsl:with-param name="authors" select="$authors"/>
     </xsl:call-template>
     <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
     <meta name="DCTERMS.creator" content="https://seveninformatics.com"/>
-    <xsl:if test="exists($created-date)">
-      <meta name="DCTERMS.created" content="{$created-date}"/>
+    <xsl:if test="exists($created-dateTime)">
+      <meta name="DCTERMS.created" content="{$created-dateTime}"/>
     </xsl:if>
-    <xsl:if test="exists($modified-date)">
-      <meta name="DCTERMS.modified" content="{$modified-date}"/>
+    <xsl:if test="exists($modified-dateTime)">
+      <meta name="DCTERMS.modified" content="{$modified-dateTime}"/>
     </xsl:if>
   </xsl:template>
   
@@ -89,5 +90,14 @@
     <xsl:param name="dita-filename" as="xs:string" required="yes"/>
     <xsl:sequence select="replace($dita-filename, '\.dita(map)?$', '.html')"/>
   </xsl:function>
-  
+
+  <!--
+  Adjust a date to UTC timezone and then formats it as
+  nth Month Year.
+  -->
+  <xsl:function name="hcom:simple-date-utc-from-dateTime" as="xs:string">
+    <xsl:param name="dateTime" as="xs:dateTime" required="yes"/>
+    <xsl:sequence select="format-dateTime(adjust-dateTime-to-timezone($dateTime, xs:dayTimeDuration('PT0H')), '[D1o] [MNn] [Y0001]')"/>
+  </xsl:function>
+
 </xsl:stylesheet>

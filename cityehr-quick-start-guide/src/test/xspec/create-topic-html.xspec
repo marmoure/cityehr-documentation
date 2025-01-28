@@ -4,7 +4,8 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:htop="http://cityehr/html/topic"
   stylesheet="../../main/xslt/create-topic-html.xslt">
-  
+
+  <x:param name="version"                 as="xs:string">xspec-test-version</x:param>
   <x:param name="petal-api-url"           as="xs:string">https://petal.evolvedbinary.com</x:param>
   <x:param name="petal-github-org-name"   as="xs:string">evolvedbinary</x:param>
   <x:param name="petal-github-repo-name"  as="xs:string">cityehr-documentation</x:param>
