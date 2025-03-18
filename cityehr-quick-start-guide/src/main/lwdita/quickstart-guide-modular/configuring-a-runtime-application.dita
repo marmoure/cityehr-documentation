@@ -7,7 +7,7 @@
         <section id="Creating-Your-Own-cityEHR-Application-New-Application">
             <title>Creating Your Own cityEHR Application – New Application</title>
             <p>These instructions assume you are making an application with the identifier myEHR. Note that this identifier can contain upper/lower case characters and digits but no spaces. </p>
-            <ol id="ol_byr_14v_vcc">
+            <ol>
                 <li>
                     <p>Navigate to cityEHR Log-in Page </p>
                 </li>

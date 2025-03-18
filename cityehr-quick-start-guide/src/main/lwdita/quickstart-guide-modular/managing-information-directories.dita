@@ -24,9 +24,9 @@
                     <p>Ensure that the correct Speciality and Directory Type are selected. For this exercise, it should be set at Elfin2 and Element, respectively. </p> 
                 </li>
                 <li>
-                    <p>In the “Directory” dropdown list at the top right of the screen, select the directory you wish to edit or add to. For this example, we have selected “Adverse Effects” as our
+                    <p>In the “Directory” drop-down list at the top right of the screen, select the directory you wish to edit or add to. For this example, we have selected “Adverse Effects” as our
                         Element Directory. </p>
-                    <p><image href="images/admin-manage-dirc-drop-down.png" format="image/png"><alt>Selecting the desired directory from the dropdown list</alt></image></p>
+                    <p><image href="images/admin-manage-dirc-drop-down.png" format="image/png"><alt>Selecting the desired directory from the drop-down list</alt></image></p>
                 </li>
                 <li>
                     <p>You can add or edit this directory by clicking on the “+” sign at the top left of the directory or by editing the text boxes. </p> 

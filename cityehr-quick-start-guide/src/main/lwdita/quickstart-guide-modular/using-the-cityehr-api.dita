@@ -42,7 +42,7 @@
             </p>
             <p><image href="images/api-response-failed.png" format="image/png"><alt></alt></image>
             </p>
-            <ol id="ol_zbs_14v_vcc">
+            <ol>
                 <li>
                     <p><b>Get List of Applications</b>
                     </p>

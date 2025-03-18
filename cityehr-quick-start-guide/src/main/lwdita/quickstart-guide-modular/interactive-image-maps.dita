@@ -24,7 +24,7 @@
         <section id="Creating-a-New-Image-Map">
             <title>Creating a New Image Map</title>
             <p>There are several steps to creating a new image map for an Entry in the clinical information model: </p>
-            <ol id="ol_jbs_14v_vcc">
+            <ol>
                 <li>
                     <p>Set the Rendition of the Entry to ImageMap </p>
                 </li>
