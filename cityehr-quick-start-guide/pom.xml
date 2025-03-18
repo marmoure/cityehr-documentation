@@ -116,6 +116,16 @@
                                     <dir>${lwdita.src}</dir>
                                     <includes>quickstart-guide.ditamap</includes>
                                     <stylesheet>src/main/xslt/create-map-pdf.xslt</stylesheet>
+                                    <parameters>
+                                        <parameter>
+                                            <name>version</name>
+                                            <value>${project.version}</value>
+                                        </parameter>
+                                        <parameter>
+                                            <name>revision</name>
+                                            <value>${maven.build.timestamp}</value>
+                                        </parameter>
+                                    </parameters>
                                     <outputDir>${fo.generated-resources}</outputDir>
                                     <fileMappers>
                                         <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
@@ -239,6 +249,14 @@
                                             <includes>quickstart-guide.ditamap</includes>
                                             <stylesheet>src/main/xslt/create-map-html.xslt</stylesheet>
                                             <parameters>
+                                                <parameter>
+                                                    <name>version</name>
+                                                    <value>${project.version}</value>
+                                                </parameter>
+                                                <parameter>
+                                                    <name>revision</name>
+                                                    <value>${maven.build.timestamp}</value>
+                                                </parameter>
                                                 <parameter>
                                                     <name>download-pdf-filename</name>
                                                     <value>quickstart-guide.pdf</value>

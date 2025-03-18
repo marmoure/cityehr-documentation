@@ -18,6 +18,12 @@
 
   <xsl:output method="html" version="5.0" encoding="UTF-8" indent="yes"/>
 
+  <!-- PARAMETER - the version number of the generated document -->
+  <xsl:param name="version" required="yes" as="xs:string"/>
+  
+  <!-- PARAMETER - the revision date and time of the generated document -->
+  <xsl:param name="revision" required="no" as="xs:dateTime" select="current-dateTime()"/>
+
   <xsl:param name="petal-api-url"           as="xs:string" required="yes"/>
   <xsl:param name="petal-github-org-name"   as="xs:string" required="yes"/>
   <xsl:param name="petal-github-repo-name"  as="xs:string" required="yes"/>
@@ -31,6 +37,9 @@
       <head>
         <xsl:call-template name="hcom:meta">
           <xsl:with-param name="authors" select="$authors"/>
+          <xsl:with-param name="version" select="$version"/>
+          <xsl:with-param name="created-dateTime" select="$revision"/>
+          <xsl:with-param name="modified-dateTime" select="$revision"/>
         </xsl:call-template>
       </head>
       <body>
