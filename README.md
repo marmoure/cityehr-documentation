@@ -2,7 +2,9 @@
 [![Build Status](https://github.com/cityehr/cityehr-documentation/actions/workflows/ci.yml/badge.svg)](https://github.com/cityehr/cityehr-documentation/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-CC%20BY%20NC%20SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-This respository contains the documentation for cityEHR. The documentation is authored in [LwDITA](https://dita-lang.org/lwdita/capabilities/capabilities) XDITA format.
+This repository contains the documentation for cityEHR. The documentation is authored in [LwDITA](https://dita-lang.org/lwdita/capabilities/capabilities) XDITA format.
+
+If you just want to **read the docs** [click here](https://cityehr.github.io/cityehr-documentation/). 
 
 When the source code of a document is updated in GitHub, we use GitHub Actions to automatically render a new HTML and PDF version of the documentation.
 
