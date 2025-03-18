@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Modelling Guide</title>
+      <meta xmlns:com="http://cityehr/common" name="author" content="John Chelsom">
+      <meta xmlns:com="http://cityehr/common" name="author" content="Stephanie Cabrera">
+      <meta xmlns:com="http://cityehr/common" name="author" content="Catriona Hopper">
+      <meta xmlns:com="http://cityehr/common" name="author" content="Jennifer Ramirez">
+      <link xmlns:com="http://cityehr/common" rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
+      <meta xmlns:com="http://cityehr/common" name="DCTERMS.creator" content="https://seveninformatics.com">
+      <meta xmlns:com="http://cityehr/common" name="DCTERMS.created" content="${maven.build.timestamp}">
+      <meta xmlns:com="http://cityehr/common" name="DCTERMS.modified" content="${maven.build.timestamp}">
+   </head>
+   <body about="">
+      <div id="cover-page">
+         <div id="cover-page-logo"><img src="images/cityehr-logo.png"></div>
+         <div id="version" style="font-size: 9pt;">
+            <p><b>Version:</b>${project.version}</p>
+            <p><b>Revision:</b>${maven.build.timestamp}</p>
+         </div>
+         <div id="license" style="display: flex; align-items: center; justify-content: left">
+            <div id="license-image" style="max-width: 100%; max-height:100%;"><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="images/by-nc-sa.png" width="30%"></a></div>
+            <div id="license-text" style="padding-left: 8pt; font-size: 8pt;">
+               <p><a property="cc:attributionName" rel="cc:attributionURL" href="https://seveninformatics.com">Copyright 2023 Seven Informatics Limited</a></p>
+               <p><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution NonCommercial ShareAlike 4.0</a></p>
+            </div>
+         </div>
+      </div>
+      <h1>Documents Available</h1>
+      <ol>
+         <li>
+            <article typeof="cc:Work"><time datetime="${maven.build.timestamp}" pubdate="pubdate"></time><h2 property="dct:title">Quick Start Guide</h2>
+               <ul>
+                  <li><div id="view-html-version"><a href="quick-start-guide/index.html">View online version...</a></div></li>
+                  <li><div id="download-pdf-version"><a href="quick-start-guide/quickstart-guide.pdf">Download PDF version</a></div></li>
+               </ul>
+            </article>
+         </li>
+         <li>
+            <article typeof="cc:Work"><time datetime="${maven.build.timestamp}" pubdate="pubdate"></time><h2 property="dct:title">Modelling Guide</h2>
+               <ul>
+                  <li><div id="view-html-version"><a href="modelling-guide/index.html">View online version...</a></div></li>
+                  <li><div id="download-pdf-version"><a href="modelling-guide/modelling-guide.pdf">Download PDF version</a></div></li>
+               </ul>
+            </article>
+         </li>
+      </ol>
+   </body>
+</html>

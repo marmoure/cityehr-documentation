@@ -67,6 +67,14 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <saxon.version>12.5</saxon.version>
+
+        <common.catalog.path>${project.basedir}/../cityehr-documentation-common/src/main/catalog/catalog.xml</common.catalog.path>
+
+        <common.xslt.path>${project.basedir}/../cityehr-documentation-common/src/main/xslt</common.xslt.path>
+        <common.create-map-pdf.xslt.path>${common.xslt.path}/create-map-pdf.xslt</common.create-map-pdf.xslt.path>
+        <common.create-map-html.xslt.path>${common.xslt.path}/create-map-html.xslt</common.create-map-html.xslt.path>
+
+        <common.images.path>${project.basedir}/../cityehr-documentation-common/src/main/images</common.images.path>
     </properties>
 
     <build>

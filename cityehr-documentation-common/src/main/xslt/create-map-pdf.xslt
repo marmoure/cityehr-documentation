@@ -25,6 +25,9 @@
 
   <!-- PARAMETER - the revision date and time of the generated document -->
   <xsl:param name="revision" required="no" as="xs:dateTime" select="current-dateTime()"/>
+
+  <!-- PARAMETER - the basedir for image files included in the FO -->
+  <xsl:param name="images-basedir" required="no" as="xs:string"/>
   
   <xsl:variable name="authors" as="xs:string+" select="('John Chelsom', 'Stephanie Cabrera', 'Catriona Hopper', 'Jennifer Ramirez')"/>
   
@@ -51,7 +54,7 @@
   <xsl:template match="/map/topicmeta" mode="cover-page-footer">
     <fo:block-container position="absolute">
       <fo:block>
-        <fo:basic-link external-destination="{othermeta[@name eq 'dcterms:license'][2]/@content}"><fo:external-graphic src="{com:abs-uri(., 'images/by-nc-sa.png')}"/></fo:basic-link>
+        <fo:basic-link external-destination="{othermeta[@name eq 'dcterms:license'][2]/@content}"><fo:external-graphic src="{com:abs-uri(., com:image-path($images-basedir, 'by-nc-sa.png'))}"/></fo:basic-link>
       </fo:block>
     </fo:block-container>
     <fo:block-container position="absolute" margin-left="110pt" display-align="after" font-size="8pt">

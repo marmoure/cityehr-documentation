@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.seveninformatics.cityehr.documentation</groupId>
+        <artifactId>cityehr-documentation-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../cityehr-documentation-parent</relativePath>
+    </parent>
+
+    <artifactId>cityehr-documentation-website</artifactId>
+    <packaging>pom</packaging>
+
+    <name>cityEHR Documentation Website</name>
+    <description>Website for cityEHR documentation projects</description>
+
+    <scm>
+        <connection>scm:git:https://github.com/cityehr/cityehr-documentation.git</connection>
+        <developerConnection>scm:git:https://github.com/cityehr/cityehr-documentation.git</developerConnection>
+        <url>scm:git:https://github.com/cityehr/cityehr-documentation.git</url>
+    </scm>
+
+    <properties>
+        <website.output.folder>${project.build.directory}/website</website.output.folder>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cityehr-documentation-common</artifactId>
+            <version>${project.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cityehr-quick-start-guide</artifactId>
+            <version>${project.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cityehr-modelling-guide</artifactId>
+            <version>${project.version}</version>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/website</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>resources</goal>
+                        </goals>
+                    </execution>
+
+                    <execution>
+                        <id>copy-html</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${website.output.folder}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.outputDirectory}</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>copy-common-images</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${website.output.folder}/images</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${common.images.path}</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>copy-modelling-guide</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${website.output.folder}/modelling-guide</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.basedir}/../cityehr-modelling-guide/target/website</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>copy-quick-start-guide</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${website.output.folder}/quick-start-guide</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.basedir}/../cityehr-quick-start-guide/target/website</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

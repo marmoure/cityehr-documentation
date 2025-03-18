@@ -22,6 +22,7 @@
 
     <properties>
         <lwdita.src>src/main/lwdita/modelling-guide</lwdita.src>
+        <images.basedir>${project.build.outputDirectory}/modelling-guide/images</images.basedir>
         <fo.generated-resources>${project.build.directory}/generated-resources/fo</fo.generated-resources>
         <html.generated-resources>${project.build.directory}/generated-resources/html</html.generated-resources>
         <website.output.folder>${project.build.directory}/website</website.output.folder>
@@ -32,6 +33,15 @@
         <petal.github-branch>develop</petal.github-branch>
         <petal.referrer-base-url>https://evolvedbinary.github.io/cityehr-documentation</petal.referrer-base-url>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cityehr-documentation-common</artifactId>
+            <version>${project.version}</version>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
 
     <build>
         <resources>
@@ -52,6 +62,23 @@
                             <goal>resources</goal>
                         </goals>
                     </execution>
+
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${images.basedir}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${common.images.path}</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
 
@@ -68,7 +95,7 @@
                         <configuration>
                             <catalogHandling>strict</catalogHandling>
                             <catalogs>
-                                <catalog>src/main/catalog/catalog.xml</catalog>
+                                <catalog>${common.catalog.path}</catalog>
                             </catalogs>
                             <validationSets>
                                 <validationSet>
@@ -76,29 +103,6 @@
                                     <dir>src/main/lwdita</dir>
                                     <includes>
                                         <include>**/*.dita*</include>
-                                    </includes>
-                                </validationSet>
-                            </validationSets>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>validate-xslt</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>validate</goal>
-                        </goals>
-                        <configuration>
-                            <catalogHandling>strict</catalogHandling>
-                            <catalogs>
-                                <catalog>src/main/catalog/catalog.xml</catalog>
-                            </catalogs>
-                            <validationSets>
-                                <validationSet>
-                                    <schemaLanguage>http://www.w3.org/2001/XMLSchema</schemaLanguage>
-                                    <publicId>http://www.w3.org/1999/XSL/Transform</publicId>
-                                    <dir>src/main/xslt</dir>
-                                    <includes>
-                                        <include>*.xslt</include>
                                     </includes>
                                 </validationSet>
                             </validationSets>
@@ -115,7 +119,7 @@
                                 <transformationSet>
                                     <dir>${lwdita.src}</dir>
                                     <includes>modelling-guide.ditamap</includes>
-                                    <stylesheet>src/main/xslt/create-map-pdf.xslt</stylesheet>
+                                    <stylesheet>${common.create-map-pdf.xslt.path}</stylesheet>
                                     <parameters>
                                         <parameter>
                                             <name>version</name>
@@ -124,6 +128,10 @@
                                         <parameter>
                                             <name>revision</name>
                                             <value>${maven.build.timestamp}</value>
+                                        </parameter>
+                                        <parameter>
+                                            <name>images-basedir</name>
+                                            <value>${images.basedir}</value>
                                         </parameter>
                                     </parameters>
                                     <outputDir>${fo.generated-resources}</outputDir>
@@ -135,39 +143,6 @@
                                 </transformationSet>
                             </transformationSets>
                         </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            
-            <plugin>
-                <groupId>io.xspec.maven</groupId>
-                <artifactId>xspec-maven-plugin</artifactId>
-                <version>2.2.0</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>net.sf.saxon</groupId>
-                        <artifactId>Saxon-HE</artifactId>
-                        <!-- Not yet compatible with Saxon 12, see: https://github.com/xspec/xspec-maven-plugin-1/issues/79 --> 
-                        <version>10.9</version>
-                    </dependency>
-                    <dependency>
-                        <!-- Not yet compatible with XSpec 3, see: https://github.com/xspec/xspec-maven-plugin-1/issues/79 -->
-                        <groupId>io.xspec</groupId>
-                        <artifactId>xspec</artifactId>
-                        <version>2.3.2</version>
-                    </dependency>
-                    <dependency>
-                         <!-- See: https://github.com/xspec/xspec-maven-plugin-1/issues/73 -->
-                        <groupId>commons-io</groupId>
-                        <artifactId>commons-io</artifactId>
-                        <version>2.11.0</version>
-                    </dependency>
-                </dependencies>
-                <executions>
-                    <execution>
-                        <id>xspec-tests</id>
-                        <phase>test</phase>
-                        <goals><goal>run-xspec</goal></goals>
                     </execution>
                 </executions>
             </plugin>
@@ -230,6 +205,12 @@
     <profiles>
         <profile>
             <id>modelling-guide-website</id>
+            <activation>
+                <property>
+                    <name>cityehr-documentation-website</name>
+                    <value>true</value>
+                </property>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
@@ -247,7 +228,7 @@
                                         <transformationSet>
                                             <dir>${lwdita.src}</dir>
                                             <includes>modelling-guide.ditamap</includes>
-                                            <stylesheet>src/main/xslt/create-map-html.xslt</stylesheet>
+                                            <stylesheet>${common.create-map-html.xslt.path}</stylesheet>
                                             <parameters>
                                                 <parameter>
                                                     <name>version</name>
@@ -321,7 +302,7 @@
                                             <filtering>false</filtering>
                                         </resource>
                                         <resource>
-                                            <directory>${lwdita.src}/images</directory>
+                                            <directory>${images.basedir}</directory>
                                             <filtering>false</filtering>
                                             <targetPath>images</targetPath>
                                         </resource>

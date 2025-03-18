@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.seveninformatics.cityehr.documentation</groupId>
+        <artifactId>cityehr-documentation-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../cityehr-documentation-parent</relativePath>
+    </parent>
+
+    <artifactId>cityehr-documentation-common</artifactId>
+    <packaging>pom</packaging>
+
+    <name>cityEHR Documentation Common Files</name>
+    <description>Common Files for cityEHR documentation projects</description>
+
+    <scm>
+        <connection>scm:git:https://github.com/cityehr/cityehr-documentation.git</connection>
+        <developerConnection>scm:git:https://github.com/cityehr/cityehr-documentation.git</developerConnection>
+        <url>scm:git:https://github.com/cityehr/cityehr-documentation.git</url>
+    </scm>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>xml-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>validate-xslt</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>validate</goal>
+                        </goals>
+                        <configuration>
+                            <catalogHandling>strict</catalogHandling>
+                            <catalogs>
+                                <catalog>${common.catalog.path}</catalog>
+                            </catalogs>
+                            <validationSets>
+                                <validationSet>
+                                    <schemaLanguage>http://www.w3.org/2001/XMLSchema</schemaLanguage>
+                                    <publicId>http://www.w3.org/1999/XSL/Transform</publicId>
+                                    <dir>src/main/xslt</dir>
+                                    <includes>
+                                        <include>*.xslt</include>
+                                    </includes>
+                                </validationSet>
+                            </validationSets>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>io.xspec.maven</groupId>
+                <artifactId>xspec-maven-plugin</artifactId>
+                <version>2.2.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.sf.saxon</groupId>
+                        <artifactId>Saxon-HE</artifactId>
+                        <!-- Not yet compatible with Saxon 12, see: https://github.com/xspec/xspec-maven-plugin-1/issues/79 -->
+                        <version>10.9</version>
+                    </dependency>
+                    <dependency>
+                        <!-- Not yet compatible with XSpec 3, see: https://github.com/xspec/xspec-maven-plugin-1/issues/79 -->
+                        <groupId>io.xspec</groupId>
+                        <artifactId>xspec</artifactId>
+                        <version>2.3.2</version>
+                    </dependency>
+                    <dependency>
+                        <!-- See: https://github.com/xspec/xspec-maven-plugin-1/issues/73 -->
+                        <groupId>commons-io</groupId>
+                        <artifactId>commons-io</artifactId>
+                        <version>2.11.0</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>xspec-tests</id>
+                        <phase>test</phase>
+                        <goals><goal>run-xspec</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

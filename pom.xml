@@ -22,8 +22,24 @@
 
     <modules>
         <module>cityehr-documentation-parent</module>
+        <module>cityehr-documentation-common</module>
         <module>cityehr-quick-start-guide</module>
         <module>cityehr-modelling-guide</module>
     </modules>
+
+    <profiles>
+        <profile>
+            <id>cityehr-documentation-website</id>
+            <activation>
+                <property>
+                    <name>cityehr-documentation-website</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <modules>
+                <module>cityehr-documentation-website</module>
+            </modules>
+        </profile>
+    </profiles>
 
 </project>

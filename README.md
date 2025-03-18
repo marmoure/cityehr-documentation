@@ -9,9 +9,10 @@ When the source code of a document is updated in GitHub, we use GitHub Actions t
 
 ## Documents
 
-| Title  | Source Location | Renderings |
-|---|---|---|
+| Title             | Source Location                                                                                                                          | Renderings                                                                                                                             |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | Quick Start Guide | [cityehr-quick-start-guide/src/main/lwdita/quickstart-guide-modular](cityehr-quick-start-guide/src/main/lwdita/quickstart-guide-modular) | [HTML](https://cityehr.github.io/cityehr-documentation/) / [PDF](https://cityehr.github.io/cityehr-documentation/quickstart-guide.pdf) |
+| Modelling Guide   | [cityehr-modelling-guide/src/main/lwdita/modelling-guide](cityehr-modelling-guide/src/main/lwdita/modelling-guide)                       | [HTML](https://cityehr.github.io/cityehr-documentation/) / [PDF](https://cityehr.github.io/cityehr-documentation/modelling-guide.pdf)  |
 
 
 ## Developing the Documentation
@@ -34,9 +35,12 @@ $ cd cityehr-documentation
 
 3. Run the following command to have Maven (mvn) render a new PDF and HTML version of the documentation:
 ```bash
-$ mvn clean package -Pquick-start-guide-website
+$ mvn clean package -Dcityehr-documentation-website=true
 ```
 
 You can find the rendered versions of the documentation in the `target/` sub-folder of each module. For example:
+* `cityehr-documentation-website/target/website/index.html`
 * `cityehr-quick-start-guide/target/quickstart-guide.pdf`
 * `cityehr-quick-start-guide/target/website/index.html`
+* `cityehr-modelling-guide/target/modelling-guide.pdf`
+* `cityehr-modelling-guide/target/website/index.html`

@@ -45,12 +45,29 @@
   </xsl:function>
 
   <!--
-   Given a node as context and a reletaive HREF, create an absolute URI.
+   Given a node as context and a relative HREF, create an absolute URI.
   -->
   <xsl:function name="com:abs-uri" as="xs:string">
     <xsl:param name="context" as="node()" required="yes"/>
     <xsl:param name="rel-href" as="xs:string" required="yes"/>
-    <xsl:sequence select="concat(com:parent-path(com:document-uri($context)), '/', $rel-href)"/>
+    <xsl:choose>
+      <xsl:when test="starts-with($rel-href, '/')">
+        <!-- path is already absolute local Unix file path -->
+        <xsl:sequence select="concat('file:', $rel-href)"/>
+      </xsl:when>
+      <xsl:when test="matches($rel-href, '[A-Z]:\\')">
+        <!-- path is already absolute local Windows file path -->
+        <xsl:sequence select="concat('file:/', replace($rel-href, '\', '/'))"/>
+      </xsl:when>
+      <xsl:when test="starts-with($rel-href, 'file:/') or starts-with($rel-href, 'http:/') or starts-with($rel-href, 'https:/')">
+        <!-- path is already absolute -->
+        <xsl:sequence select="$rel-href"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <!-- path is relative, let's make it absolute -->
+        <xsl:sequence select="concat(com:parent-path(com:document-uri($context)), '/', $rel-href)"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:function>
 
   <!-- Get the topic by loading the topic from a topicref -->
@@ -65,6 +82,13 @@
     <xsl:param name="context" as="node()" required="yes"/>
     <xsl:param name="topicref" as="element(topicref)" required="yes"/>
     <xsl:sequence select="com:get-topic($context, $topicref)/title"/>
+  </xsl:function>
+
+  <!-- Create an image file path from a basedir and filename -->
+  <xsl:function name="com:image-path" as="xs:string">
+    <xsl:param name="images-basedir" as="xs:string"/>
+    <xsl:param name="image-filename" as="xs:string" required="yes"/>
+    <xsl:sequence select="concat(($images-basedir, 'images')[1], '/', $image-filename)"/>
   </xsl:function>
 
 </xsl:stylesheet>
