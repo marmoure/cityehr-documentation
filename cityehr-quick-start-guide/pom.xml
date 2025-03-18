@@ -21,8 +21,8 @@
     </scm>
 
     <properties>
-        <lwdita.src>src/main/lwdita/quickstart-guide-modular</lwdita.src>
-        <images.basedir>${project.build.outputDirectory}/quickstart-guide-modular/images</images.basedir>
+        <lwdita.src>src/main/lwdita/quick-start-guide</lwdita.src>
+        <images.basedir>${project.build.outputDirectory}/quick-start-guide/images</images.basedir>
         <fo.generated-resources>${project.build.directory}/generated-resources/fo</fo.generated-resources>
         <html.generated-resources>${project.build.directory}/generated-resources/html</html.generated-resources>
         <website.output.folder>${project.build.directory}/website</website.output.folder>
@@ -118,7 +118,7 @@
                             <transformationSets>
                                 <transformationSet>
                                     <dir>${lwdita.src}</dir>
-                                    <includes>quickstart-guide.ditamap</includes>
+                                    <includes>quick-start-guide.ditamap</includes>
                                     <stylesheet>${common.create-map-pdf.xslt.path}</stylesheet>
                                     <parameters>
                                         <parameter>
@@ -169,9 +169,9 @@
                                 <argument>-Djavax.xml.transform.TransformerFactory=net.sf.saxon.TransformerFactoryImpl</argument>
                                 <argument>org.apache.fop.cli.Main</argument>
                                 <argument>-fo</argument>
-                                <argument>${fo.generated-resources}/quickstart-guide.fo</argument>
+                                <argument>${fo.generated-resources}/quick-start-guide.fo</argument>
                                 <argument>-pdf</argument>
-                                <argument>${project.build.directory}/quickstart-guide.pdf</argument>
+                                <argument>${project.build.directory}/quick-start-guide.pdf</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -227,7 +227,7 @@
                                     <transformationSets>
                                         <transformationSet>
                                             <dir>${lwdita.src}</dir>
-                                            <includes>quickstart-guide.ditamap</includes>
+                                            <includes>quick-start-guide.ditamap</includes>
                                             <stylesheet>${common.create-map-html.xslt.path}</stylesheet>
                                             <parameters>
                                                 <parameter>
@@ -240,7 +240,7 @@
                                                 </parameter>
                                                 <parameter>
                                                     <name>download-pdf-filename</name>
-                                                    <value>quickstart-guide.pdf</value>
+                                                    <value>quick-start-guide.pdf</value>
                                                 </parameter>
                                                 <parameter>
                                                     <name>output-folder</name>
@@ -270,7 +270,7 @@
                                             <outputDir>${html.generated-resources}</outputDir>
                                             <fileMappers>
                                                 <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.RegExpFileMapper">
-                                                    <pattern>quickstart-guide.ditamap</pattern>
+                                                    <pattern>quick-start-guide.ditamap</pattern>
                                                     <replacement>index.html</replacement>
                                                 </fileMapper>
                                                 <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
@@ -310,7 +310,7 @@
                                             <directory>${project.build.directory}</directory>
                                             <filtering>false</filtering>
                                             <includes>
-                                                <include>quickstart-guide.pdf</include>
+                                                <include>quick-start-guide.pdf</include>
                                             </includes>
                                         </resource>
                                     </resources>

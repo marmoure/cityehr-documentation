@@ -21,7 +21,7 @@
   
   <xsl:template match="topic">
     <!-- Generate an LwDITA Map -->
-    <xsl:result-document href="{$output-folder}/quickstart-guide.ditamap" omit-xml-declaration="no" indent="yes" doctype-public="-//OASIS//DTD LIGHTWEIGHT DITA Map//EN" doctype-system="map.dtd">
+    <xsl:result-document href="{$output-folder}/quick-start-guide.ditamap" omit-xml-declaration="no" indent="yes" doctype-public="-//OASIS//DTD LIGHTWEIGHT DITA Map//EN" doctype-system="map.dtd">
       <map id="{@id}">
         <topicmeta>
           <navtitle><xsl:value-of select="title"/></navtitle>
