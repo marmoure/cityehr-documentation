@@ -23,6 +23,7 @@
     <modules>
         <module>cityehr-documentation-parent</module>
         <module>cityehr-quick-start-guide</module>
+        <module>cityehr-modelling-guide</module>
     </modules>
 
 </project>
