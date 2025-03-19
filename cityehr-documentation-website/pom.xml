@@ -83,17 +83,23 @@
                     </execution>
 
                     <execution>
-                        <id>copy-common-images</id>
+                        <id>copy-common-resources</id>
                         <phase>package</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${website.output.folder}/images</outputDirectory>
+                            <outputDirectory>${website.output.folder}</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>${common.images.path}</directory>
                                     <filtering>false</filtering>
+                                    <targetPath>images</targetPath>
+                                </resource>
+                                <resource>
+                                    <directory>${common.fonts.path}</directory>
+                                    <filtering>false</filtering>
+                                    <targetPath>fonts</targetPath>
                                 </resource>
                             </resources>
                         </configuration>

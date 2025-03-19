@@ -65,7 +65,7 @@
 
                     <execution>
                         <id>copy-resources</id>
-                        <phase>validate</phase>
+                        <phase>process-resources</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
@@ -305,6 +305,11 @@
                                             <directory>${images.basedir}</directory>
                                             <filtering>false</filtering>
                                             <targetPath>images</targetPath>
+                                        </resource>
+                                        <resource>
+                                            <directory>${common.fonts.path}</directory>
+                                            <filtering>false</filtering>
+                                            <targetPath>fonts</targetPath>
                                         </resource>
                                         <resource>
                                             <directory>${project.build.directory}</directory>

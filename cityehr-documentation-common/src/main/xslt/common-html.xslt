@@ -40,6 +40,29 @@
     </xsl:for-each>
   </xsl:template>
 
+  <xsl:template name="hcom:style">
+    <style>
+      @font-face {
+      font-family: avertaRegular;
+      src: url(fonts/AvertaDemoPECuttedDemo-Regular.otf);
+      }
+
+      @font-face {
+      font-family: avertaExtraBold;
+      src: url(fonts/AvertaDemoPE-ExtraBold.otf);
+      font-weight: bold;
+      }
+
+      body {
+      font-family: avertaRegular;
+      }
+
+      h1, h2, h3 {
+      font-family: avertaExtraBold;
+      }
+    </style>
+  </xsl:template>
+
   <!-- TOC (Table of Contents) -->
   <xsl:template name="hcom:toc">
     <xsl:param name="sections" as="element()+"/>

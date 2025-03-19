@@ -21,7 +21,7 @@
   <xsl:import href="common.xslt"/>
   
   <xsl:template name="pcom:fo-root">
-    <fo:root xml:lang="en" font-family="Arial,Helvetica,sans-serif" font-size="11pt">
+    <fo:root xml:lang="en" font-family="Averta,Arial,Helvetica,sans-serif" font-size="11pt">
       <xsl:call-template name="pcom:fo-layout-master-set"/>
 
       <xsl:apply-templates mode="declarations"/>
