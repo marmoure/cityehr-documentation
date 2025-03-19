@@ -44,6 +44,12 @@
           <xsl:with-param name="created-dateTime" select="$revision"/>
           <xsl:with-param name="modified-dateTime" select="$revision"/>
         </xsl:call-template>
+        <xsl:call-template name="hcom:style"/>
+        <style>
+          .toc-entry-level-1 {
+            margin-top: 1em;
+          }
+        </style>
       </head>
       <body about="">
         <div id="cover-page">
@@ -101,13 +107,13 @@
   
   <!-- TOC (Table of Contents) -->
   <xsl:template match="map" mode="toc">
-    <secton>
+    <section>
       <h2>Table of Contents</h2>
       <xsl:apply-templates select="topicref" mode="create-topic-html"/>
       <xsl:call-template name="hcom:toc">
         <xsl:with-param name="sections" select="topicref"/>
       </xsl:call-template>
-    </secton>
+    </section>
   </xsl:template>
 
   <!-- OVERRIDE this template from create-topic-html.xsd so that we can add previous and following links -->

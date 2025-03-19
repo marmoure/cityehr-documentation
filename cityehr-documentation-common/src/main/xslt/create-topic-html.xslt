@@ -41,6 +41,7 @@
           <xsl:with-param name="created-dateTime" select="$revision"/>
           <xsl:with-param name="modified-dateTime" select="$revision"/>
         </xsl:call-template>
+        <xsl:call-template name="hcom:style"/>
       </head>
       <body>
         <nav id="top-nav">
