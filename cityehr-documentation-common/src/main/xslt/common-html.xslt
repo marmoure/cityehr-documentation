@@ -43,22 +43,22 @@
   <xsl:template name="hcom:style">
     <style>
       @font-face {
-      font-family: avertaRegular;
-      src: url(fonts/AvertaDemoPECuttedDemo-Regular.otf);
+        font-family: avertaRegular;
+        src: url(fonts/AvertaDemoPECuttedDemo-Regular.otf);
       }
 
       @font-face {
-      font-family: avertaExtraBold;
-      src: url(fonts/AvertaDemoPE-ExtraBold.otf);
-      font-weight: bold;
+        font-family: avertaExtraBold;
+        src: url(fonts/AvertaDemoPE-ExtraBold.otf);
+        font-weight: bold;
       }
 
       body {
-      font-family: avertaRegular;
+        font-family: avertaRegular;
       }
 
       h1, h2, h3 {
-      font-family: avertaExtraBold;
+        font-family: avertaExtraBold;
       }
     </style>
   </xsl:template>
@@ -89,11 +89,11 @@
     <xsl:variable name="section-id" select="generate-id($section)"/>
 
     <!-- section -->
-    <li><xsl:value-of select="string-join($numbers, '.')"/><xsl:text>. </xsl:text><a name="{$section-id}" href="{$page-url}"><xsl:value-of select="$section/title"/></a></li>
+    <li class="toc-entry-level-{$level}"><xsl:value-of select="string-join($numbers, '.')"/><xsl:text>. </xsl:text><a name="{$section-id}" href="{$page-url}"><xsl:value-of select="$section/title"/></a></li>
 
     <!-- then process sub sections recursively (no more than 4 levels deep!) -->
-    <xsl:if test="$level le 4">
-      <ol style="list-style-type: none;">
+    <xsl:if test="$level le 4 and exists($section/body/section|$section/section)">
+      <ol class="toc-level-{$level + 1}" style="list-style-type: none;">
         <xsl:for-each select="$section/body/section|$section/section">
           <xsl:call-template name="hcom:toc-entry">
             <xsl:with-param name="section"  select="."/>
