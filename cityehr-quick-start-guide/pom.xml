@@ -27,7 +27,7 @@
         <html.generated-resources>${project.build.directory}/generated-resources/html</html.generated-resources>
         <website.output.folder>${project.build.directory}/website</website.output.folder>
 
-        <petal.api-url>https://petal.evolvedbinary.com</petal.api-url>
+        <petal.api-url>https://dev.petal.evolvedbinary.com</petal.api-url>
         <petal.github-org-name>evolvedbinary</petal.github-org-name>
         <petal.github-repo-name>cityehr-documentation</petal.github-repo-name>
         <petal.github-branch>develop</petal.github-branch>

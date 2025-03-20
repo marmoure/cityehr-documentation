@@ -31,7 +31,7 @@ jobs:
       - name: Generate website (XSLT)
         id: generate
         # Override Maven properties for the Petal button url
-        run: mvn -B -Dpetal.api-url=https://petal.evolvedbinary.com -Dpetal.github-org-name=cityehr -Dpetal.github-repo-name=cityehr-documentation -Dpetal.github-branch=main -Dpetal.referrer-base-url=https://cityehr.github.io/cityehr-documentation package -Dcityehr-documentation-website=true
+        run: mvn -B -Dpetal.api-url=https://dev.petal.evolvedbinary.com -Dpetal.github-org-name=cityehr -Dpetal.github-repo-name=cityehr-documentation -Dpetal.github-branch=main -Dpetal.referrer-base-url=https://cityehr.github.io/cityehr-documentation package -Dcityehr-documentation-website=true
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload pages artifact
