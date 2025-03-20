@@ -5,12 +5,13 @@
   xmlns:htop="http://cityehr/html/topic"
   stylesheet="../../main/xslt/create-topic-html.xslt">
 
-  <x:param name="version"                 as="xs:string">xspec-test-version</x:param>
-  <x:param name="petal-api-url"           as="xs:string">https://petal.evolvedbinary.com</x:param>
-  <x:param name="petal-github-org-name"   as="xs:string">evolvedbinary</x:param>
-  <x:param name="petal-github-repo-name"  as="xs:string">cityehr-documentation</x:param>
-  <x:param name="petal-github-branch"     as="xs:string">develop</x:param>
-  <x:param name="petal-referrer-base-url" as="xs:string">https://evolvedbinary.github.io/cityehr-documentation</x:param>
+  <x:param name="version"                   as="xs:string">xspec-test-version</x:param>
+  <x:param name="petal-api-url"             as="xs:string">https://petal.evolvedbinary.com</x:param>
+  <x:param name="petal-github-org-name"     as="xs:string">evolvedbinary</x:param>
+  <x:param name="petal-github-repo-name"    as="xs:string">cityehr-documentation</x:param>
+  <x:param name="petal-github-branch"       as="xs:string">develop</x:param>
+  <x:param name="petal-referrer-base-url"   as="xs:string">https://evolvedbinary.github.io/cityehr-documentation</x:param>
+  <x:param name="petal-referrer-sub-folder" as="xs:string">quick-start-guide</x:param>
   
   <x:scenario label="Scenario for testing the petal-edit-url function with source file from local filesytem">
     <x:call function="htop:petal-edit-url">
@@ -20,8 +21,9 @@
       <x:param name="petal-github-repo-name"  as="xs:string">cityehr-documentation</x:param>
       <x:param name="petal-github-branch"     as="xs:string">develop</x:param>
       <x:param name="petal-referrer-base-url" as="xs:string">https://evolvedbinary.github.io/cityehr-documentation</x:param>
+      <x:param name="petal-referrer-sub-folder" as="xs:string">quick-start-guide</x:param>
     </x:call>
-    <x:expect label="Correct Petal Edit URL" select="'https://petal.evolvedbinary.com?ghrepo=evolvedbinary/cityehr-documentation&amp;source=cityehr-quick-start-guide/src/main/lwdita/quick-start-guide/verify-install.dita&amp;branch=develop&amp;referer=https://evolvedbinary.github.io/cityehr-documentation/verify-install.html'"/>
+    <x:expect label="Correct Petal Edit URL" select="'https://petal.evolvedbinary.com?ghrepo=evolvedbinary/cityehr-documentation&amp;source=cityehr-quick-start-guide/src/main/lwdita/quick-start-guide/verify-install.dita&amp;branch=develop&amp;referer=https://evolvedbinary.github.io/cityehr-documentation/quick-start-guide/verify-install.html'"/>
   </x:scenario>
   
   <x:scenario label="Scenario for testing the petal-edit-url function with source file in GitHub Action container">
@@ -32,8 +34,9 @@
       <x:param name="petal-github-repo-name"  as="xs:string">cityehr-documentation</x:param>
       <x:param name="petal-github-branch"     as="xs:string">develop</x:param>
       <x:param name="petal-referrer-base-url" as="xs:string">https://evolvedbinary.github.io/cityehr-documentation</x:param>
+      <x:param name="petal-referrer-sub-folder" as="xs:string">quick-start-guide</x:param>
     </x:call>
-    <x:expect label="Correct Petal Edit URL" select="'https://petal.evolvedbinary.com?ghrepo=evolvedbinary/cityehr-documentation&amp;source=cityehr-quick-start-guide/src/main/lwdita/quick-start-guide/verify-install.dita&amp;branch=develop&amp;referer=https://evolvedbinary.github.io/cityehr-documentation/verify-install.html'"/>
+    <x:expect label="Correct Petal Edit URL" select="'https://petal.evolvedbinary.com?ghrepo=evolvedbinary/cityehr-documentation&amp;source=cityehr-quick-start-guide/src/main/lwdita/quick-start-guide/verify-install.dita&amp;branch=develop&amp;referer=https://evolvedbinary.github.io/cityehr-documentation/quick-start-guide/verify-install.html'"/>
   </x:scenario>
   
 </x:description>

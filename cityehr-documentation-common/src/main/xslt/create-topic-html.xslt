@@ -24,11 +24,12 @@
   <!-- PARAMETER - the revision date and time of the generated document -->
   <xsl:param name="revision" required="no" as="xs:dateTime" select="current-dateTime()"/>
 
-  <xsl:param name="petal-api-url"           as="xs:string" required="yes"/>
-  <xsl:param name="petal-github-org-name"   as="xs:string" required="yes"/>
-  <xsl:param name="petal-github-repo-name"  as="xs:string" required="yes"/>
-  <xsl:param name="petal-github-branch"     as="xs:string" required="yes"/>
-  <xsl:param name="petal-referrer-base-url" as="xs:string" required="yes"/>
+  <xsl:param name="petal-api-url"             as="xs:string"  required="yes"/>
+  <xsl:param name="petal-github-org-name"     as="xs:string"  required="yes"/>
+  <xsl:param name="petal-github-repo-name"    as="xs:string"  required="yes"/>
+  <xsl:param name="petal-github-branch"       as="xs:string"  required="yes"/>
+  <xsl:param name="petal-referrer-base-url"   as="xs:string"  required="yes"/>
+  <xsl:param name="petal-referrer-sub-folder" as="xs:string?" required="no"/>
 
   <xsl:variable name="authors" as="xs:string+" select="('John Chelsom', 'Stephanie Cabrera', 'Catriona Hopper', 'Jennifer Ramirez')"/>
   
@@ -50,7 +51,7 @@
 
         <!-- Petal Edit Button -->
         <div id="petal-edit-page-button">
-          <a href="{htop:petal-edit-url(com:document-uri(.), $petal-api-url, $petal-github-org-name, $petal-github-repo-name, $petal-github-branch, $petal-referrer-base-url)}">
+          <a href="{htop:petal-edit-url(com:document-uri(.), $petal-api-url, $petal-github-org-name, $petal-github-repo-name, $petal-github-branch, $petal-referrer-base-url, $petal-referrer-sub-folder)}">
             <input type="button" value="Edit this page"/>
           </a>
         </div>
@@ -172,17 +173,18 @@
     Generates an Edit button URL for Petal
   -->
   <xsl:function name="htop:petal-edit-url" as="xs:string">
-    <xsl:param name="petal-source-file-uri"   as="xs:string" required="yes"/>
-    <xsl:param name="petal-api-url"           as="xs:string" required="yes"/>
-    <xsl:param name="petal-github-org-name"   as="xs:string" required="yes"/>
-    <xsl:param name="petal-github-repo-name"  as="xs:string" required="yes"/>
-    <xsl:param name="petal-github-branch"     as="xs:string" required="yes"/>
-    <xsl:param name="petal-referrer-base-url" as="xs:string" required="yes"/>
+    <xsl:param name="petal-source-file-uri"     as="xs:string" required="yes"/>
+    <xsl:param name="petal-api-url"             as="xs:string" required="yes"/>
+    <xsl:param name="petal-github-org-name"     as="xs:string" required="yes"/>
+    <xsl:param name="petal-github-repo-name"    as="xs:string" required="yes"/>
+    <xsl:param name="petal-github-branch"       as="xs:string" required="yes"/>
+    <xsl:param name="petal-referrer-base-url"   as="xs:string" required="yes"/>
+    <xsl:param name="petal-referrer-sub-folder" as="xs:string?"/>
 
     <xsl:variable name="petal-source-file-uri-tokens" select="tokenize($petal-source-file-uri, concat($petal-github-repo-name, '/'))" />
     <xsl:variable name="petal-source-file" select="$petal-source-file-uri-tokens[last()]" />
     <xsl:variable name="petal-webpage-filename" select="hcom:dita-filename-to-html(com:filename($petal-source-file-uri))" />
-    <xsl:sequence select="concat($petal-api-url, '?ghrepo=', $petal-github-org-name, '/', $petal-github-repo-name, '&amp;source=', $petal-source-file, '&amp;branch=', $petal-github-branch, '&amp;referer=', $petal-referrer-base-url, '/', $petal-webpage-filename)" />
+    <xsl:sequence select="concat($petal-api-url, '?ghrepo=', $petal-github-org-name, '/', $petal-github-repo-name, '&amp;source=', $petal-source-file, '&amp;branch=', $petal-github-branch, '&amp;referer=', string-join(($petal-referrer-base-url, $petal-referrer-sub-folder, $petal-webpage-filename), '/'))" />
   </xsl:function>
 
 </xsl:stylesheet>
