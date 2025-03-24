@@ -3,25 +3,25 @@
 <topic id="cohort-search">
     <title>Cohort Search</title>
     <body>
-        <p>The cohort search facility allows you to: </p>
+        <p>The cohort search facility allows you to:</p>
         <ul>
             <li>
-                <p>Make cross-patient searches on any entry/element in the information model. </p>
+                <p>Make cross-patient searches on any entry/element in the information model.</p>
             </li>
             <li>
-                <p>Combine cohorts returned from individual searches. </p>
+                <p>Combine cohorts returned from individual searches.</p>
             </li>
             <li>
-                <p>Save searches and patient cohorts. </p>
+                <p>Save searches and patient cohorts.</p>
             </li>
             <li>
-                <p>Reload searches and cohorts that have been saved previously. </p>
+                <p>Reload searches and cohorts that have been saved previously.</p>
             </li>
             <li>
-                <p>View and print cohort lists. </p>
+                <p>View and print cohort lists.</p>
             </li>
             <li>
-                <p>Export patient data for a cohort. </p>
+                <p>Export patient data for a cohort.</p>
             </li>
         </ul>
         <p>To run cohort searches, press the <b>Patient Cohorts</b> button in the main cityEHR navigation panel (available at the top of every page).</p>

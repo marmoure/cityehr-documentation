@@ -7,37 +7,37 @@
         <section id="Element-Directories">
             <title>Element Directories</title>
             <p>Directories are stored text that the user can edit. This section will show you how to
-                access and edit element directories in cityEHR. </p>
+                access and edit element directories in cityEHR.</p>
             <ol>
                 <li>
-                    <p>Navigate to the Admin screen of your chosen application. For this example, we will use Elfin 2. </p> 
+                    <p>Navigate to the Admin screen of your chosen application. For this example, we will use Elfin 2.</p> 
                     <p><image href="images/admin-manage-app-param.png" format="image/png"><alt>Manage application parameters within administration</alt></image></p>
                 </li>
                 <li>
-                    <p>Navigate to the “Directory” menu on the left of the screen. </p> 
+                    <p>Navigate to the “Directory” menu on the left of the screen.</p> 
                 </li>
                 <li>
-                    <p>Click on “Manage Directory” </p> 
+                    <p>Click on “Manage Directory”</p> 
                     <p><image href="images/admin-manage-dirc.png" format="image/png"><alt>Manage Directory administration page</alt></image></p>
                 </li>
                 <li>
-                    <p>Ensure that the correct Speciality and Directory Type are selected. For this exercise, it should be set at Elfin2 and Element, respectively. </p> 
+                    <p>Ensure that the correct Speciality and Directory Type are selected. For this exercise, it should be set at Elfin2 and Element, respectively.</p> 
                 </li>
                 <li>
                     <p>In the “Directory” drop-down list at the top right of the screen, select the directory you wish to edit or add to. For this example, we have selected “Adverse Effects” as our
-                        Element Directory. </p>
+                        Element Directory.</p>
                     <p><image href="images/admin-manage-dirc-drop-down.png" format="image/png"><alt>Selecting the desired directory from the drop-down list</alt></image></p>
                 </li>
                 <li>
-                    <p>You can add or edit this directory by clicking on the “+” sign at the top left of the directory or by editing the text boxes. </p> 
+                    <p>You can add or edit this directory by clicking on the “+” sign at the top left of the directory or by editing the text boxes.</p> 
                     <p><image href="images/admin-manage-dirc-edit.png" format="image/png"><alt>Editing the directory</alt></image></p>
                 </li>
                 <li>
-                    <p>Click the icon “Rebuild Directory” at the top left of the Manage Directory form to save and rebuild the directories into your application. </p> 
+                    <p>Click the icon “Rebuild Directory” at the top left of the Manage Directory form to save and rebuild the directories into your application.</p> 
                     <p><image href="images/admin-manage-dirc-rebuild.png" format="image/png"><alt>Rebuilding the directory</alt></image></p>
                 </li>
                 <li>
-                    <p>Navigate to the screen that contains this directory (form, letter, etc.) and view your changes </p>
+                    <p>Navigate to the screen that contains this directory (form, letter, etc.) and view your changes</p>
                 </li>
             </ol>
         </section>
@@ -45,15 +45,15 @@
             <title>Entry Directories</title>
             <ol>
                 <li>
-                    <p>Entry Directories work like Element Directories, but for Entries. You can edit Entry Directories the same way as Element Directories. To do this, navigate to Manage Directory and then Select “entry” in the Element Type drop down. </p>
+                    <p>Entry Directories work like Element Directories, but for Entries. You can edit Entry Directories the same way as Element Directories. To do this, navigate to Manage Directory and then Select “entry” in the Element Type drop down.</p>
                     <p><image href="images/admin-manage-dirc-type.png" format="image/png"><alt>Selecting the type of directory</alt></image></p>
                 </li>
                 <li>
-                    <p>Select the Name of the Directory you want to modify. </p>
+                    <p>Select the Name of the Directory you want to modify.</p>
                     <p><image href="images/admin-manage-dirc-entry.png" format="image/png"><alt>Selecting the directory to modify</alt></image></p>
                 </li>
                 <li>
-                    <p>You can make changes in the existing directories or add new ones. </p>
+                    <p>You can make changes in the existing directories or add new ones.</p>
                     <p><image href="images/admin-manage-dirc-add.png" format="image/png"><alt>Adding directories or modifying existing ones</alt></image></p>
                 </li>
             </ol>
@@ -62,10 +62,10 @@
             <title>Importing Directories</title>
             <ol>
                 <li>
-                    <p>To import a directory, first navigate to the Administration page, and then to Directory in the menu on the left. </p>
+                    <p>To import a directory, first navigate to the Administration page, and then to Directory in the menu on the left.</p>
                 </li>
                 <li>
-                    <p>Now Navigate to “Import Directories” under “Directory”. </p> 
+                    <p>Now Navigate to “Import Directories” under “Directory”.</p> 
                     <p><image href="images/admin-import-dirc.png" format="image/png"><alt>Import directory page</alt></image></p>
                 </li>
                 <li>
@@ -76,17 +76,17 @@
                     <p>Select the file “GP Details”.</p>
                 </li>
                 <li>
-                    <p>Click the import button. </p>
+                    <p>Click the import button.</p>
                     <p><image href="images/admin-import-dirc-import-button.png" format="image/png"><alt>Importing the GP details file</alt></image></p>
                 </li>
                 <li>
-                    <p>Now navigate to “Manage Directory” and navigate to your Entry Directories and you should be able to see “GP Details” as an option to edit! </p>
+                    <p>Now navigate to “Manage Directory” and navigate to your Entry Directories and you should be able to see “GP Details” as an option to edit!</p>
                 </li>
             </ol>
         </section>
         <section id="Directory-Look-Up-Using-a-Web-Service">
             <title>Directory Look Up Using a Web Service</title>
-            <p>There is an example of a directory lookup using a web service on the Registration form in the Feature Demo information model that ships with cityEHR. The web service is a demonstration service that returns a randomly generated set of demographics data, given the patientId as an input parameter. </p>
+            <p>There is an example of a directory lookup using a web service on the Registration form in the Feature Demo information model that ships with cityEHR. The web service is a demonstration service that returns a randomly generated set of demographics data, given the patientId as an input parameter.</p>
             <p><image href="images/patient-reg-form-lookup.png" format="image/png"><alt>Empty patient registration form </alt></image></p>
             <p><image href="images/patient-reg-form-lookup1.png" format="image/png"><alt>NHS number filled in patient registration form</alt></image></p>
             <p><image href="images/patient-reg-form-lookup2.png" format="image/png"><alt>Lookup service used in patient registration form</alt></image></p>

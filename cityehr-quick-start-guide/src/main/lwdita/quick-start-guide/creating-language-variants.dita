@@ -3,13 +3,13 @@
 <topic id="creating-language-variants">
         <title>Creating Language Variants</title>
         <body>
-                <p>Create Language Pack </p>
-                <p> </p>
+                <p>Create Language Pack</p>
+                <p></p>
                 <p><image href="images/admin-manage-app-lang.png" format="image/png"><alt>Create new language pack</alt></image>
                 </p>
-                <p>Enable user selection of language </p>
+                <p>Enable user selection of language</p>
                 <p><image href="images/admin-manage-app-lang-user-select.png" format="image/png"><alt>Enable user selection of language</alt></image>
                 </p>
-                <p> </p>
+                <p></p>
         </body>
 </topic>

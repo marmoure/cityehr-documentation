@@ -5,7 +5,7 @@
     <body>
         <section id="summary-view-and-charting">
             <title>Summary View and Charting</title>
-            <p>When you first access a patient's record, the <b>Summary</b> page is displayed, providing a selection of various summary views. </p>
+            <p>When you first access a patient's record, the <b>Summary</b> page is displayed, providing a selection of various summary views.</p>
             <ol>
                 <li>
                     <p>The default view is the summary for <b>Bone Chemistry – Messages</b>. These are bone chemistry results that have been sent to the cityEHR as messages from the laboratory which performed the tests. (At least we are pretending this in the test data, although the results used were originally generated in this way)

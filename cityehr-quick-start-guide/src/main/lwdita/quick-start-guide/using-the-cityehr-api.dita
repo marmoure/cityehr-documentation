@@ -6,36 +6,36 @@
     <body>
         <section id="Enabling-API-Access">
             <title>Enabling API Access</title>
-            <p>cityEHR has an Application Programming Interface (API) exposed as a RESTful web service. API For any installation API access can be enabled in the Administration page System | Manage System Parameters by clicking the Edit check box, then checking API Access and pressing Save. </p>
-            <p> </p>
+            <p>cityEHR has an Application Programming Interface (API) exposed as a RESTful web service. API For any installation API access can be enabled in the Administration page System | Manage System Parameters by clicking the Edit check box, then checking API Access and pressing Save.</p>
+            <p></p>
             <p><image href="images/admin-manage-sys-api.png" format="image/png"><alt>Enabling API access</alt></image>
             </p>
-            <p> </p>
-            <p>With cityEHR accessible on <i>http://localhost:8080/cityehr</i>, the API can be invoked using the URL </p>
+            <p></p>
+            <p>With cityEHR accessible on <i>http://localhost:8080/cityehr</i>, the API can be invoked using the URL</p>
             <p><i>http://localhost:8080/cityehr//ehr/api</i></p>
-            <p>When the API is disabled, the response (as shown in the Firefox web browser) is a simple statement with guidance on how to enable it. </p>
-            <p> </p>
+            <p>When the API is disabled, the response (as shown in the Firefox web browser) is a simple statement with guidance on how to enable it.</p>
+            <p></p>
             <p><image href="images/disabled-api-message.png" format="image/png"><alt>Disabled API message</alt></image>
             </p>
-            <p> </p>
-            <p>When the API is enabled the response (as shown in the Firefox web browser) provides a summary of the API specification. </p>
+            <p></p>
+            <p>When the API is enabled the response (as shown in the Firefox web browser) provides a summary of the API specification.</p>
             <p><image href="images/enabled-api-message.png" format="image/png"><alt>Enabled API message</alt></image>
             </p>
-            <p>Each command is shown with an example call, response and a list of its parameters. </p>
+            <p>Each command is shown with an example call, response and a list of its parameters.</p>
             <p><image href="images/enabled-api-message-cmd.png" format="image/png"><alt>API command parameters</alt></image>
             </p>
-            <p> </p>
-            <p>There are two styles of API call – either style invokes the same command: </p>
-            <p> </p>
-            <p>/ehr/api/authenticate/?userId=user&amp;password=secret </p>
-            <p>or </p>
-            <p>/ehr/api/?command=authenticate&amp;userId=user&amp;password=secret </p>
-            <p> </p>
+            <p></p>
+            <p>There are two styles of API call – either style invokes the same command:</p>
+            <p></p>
+            <p>/ehr/api/authenticate/?userId=user&amp;password=secret</p>
+            <p>or</p>
+            <p>/ehr/api/?command=authenticate&amp;userId=user&amp;password=secret</p>
+            <p></p>
         </section>
         <section id="Using-the-cityEHR-API">
             <title>Using the cityEHR API</title>
                     <p><b>Authenticate and Start a Session</b></p>
-            <p>http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=password </p>
+            <p>http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=password</p>
             <p><image href="images/api-response-sessionid.png" format="image/png"><alt></alt></image>
             </p>
             <p><xref href="http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=wrong" format="html" scope="external">http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=wrong</xref>
@@ -48,17 +48,17 @@
                     </p>
                 </li>
             </ol>
-            <p><xref href="http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=wrong" format="html" scope="external">http://localhost:8080/</xref><xref href="http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=wrong" format="html" scope="external"><u>cityehr</u></xref>/ehr/api/getApplicationList/?userId=admin&amp;sessionId=863fa22fd0253e00333d96bb4417973a </p>
-            <p> </p>
+            <p><xref href="http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=wrong" format="html" scope="external">http://localhost:8080/</xref><xref href="http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=wrong" format="html" scope="external"><u>cityehr</u></xref>/ehr/api/getApplicationList/?userId=admin&amp;sessionId=863fa22fd0253e00333d96bb4417973a</p>
+            <p></p>
             <p><b>Get Patient Demographics</b></p>
 
-            <p><xref href="http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=wrong" format="html" scope="external">http://localhost:8080/cityehr</xref>/ehr/api/getDemographics/?userId=admin&amp;sessionId=863fa22fd0253e00333d96bb4417973a&amp;applicationId=TSO-13606-EHR_Extract-cityEHR&amp;patientId=K123456789 </p>
-            <p> </p>
-                    <p>Get List of Patient Compositions </p>
-            <p><xref href="http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=wrong" format="html" scope="external">http://localhost:8080/cityehr</xref>/ehr/api/getCompositionList/?userId=admin&amp;sessionId=863fa22fd0253e00333d96bb4417973a&amp;applicationId=TSO-13606-EHR_Extract-cityEHR&amp;patientId=K123456789 </p>
-            <p> </p>
+            <p><xref href="http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=wrong" format="html" scope="external">http://localhost:8080/cityehr</xref>/ehr/api/getDemographics/?userId=admin&amp;sessionId=863fa22fd0253e00333d96bb4417973a&amp;applicationId=TSO-13606-EHR_Extract-cityEHR&amp;patientId=K123456789</p>
+            <p></p>
+                    <p>Get List of Patient Compositions</p>
+            <p><xref href="http://localhost:8080/cityehr/ehr/api/authenticate/?userId=admin&amp;password=wrong" format="html" scope="external">http://localhost:8080/cityehr</xref>/ehr/api/getCompositionList/?userId=admin&amp;sessionId=863fa22fd0253e00333d96bb4417973a&amp;applicationId=TSO-13606-EHR_Extract-cityEHR&amp;patientId=K123456789</p>
+            <p></p>
              <p><b>Get Patient Composition</b></p>
-            <p>/ehr/api/getComposition/?userId=admin&amp;sessionId=863fa22fd0253e00333d96bb4417973a&amp;applicationId=TSO-13606-EHR_Extract-cityEHR&amp;patientId=K123456789&amp;compositionId=2023-10-26T20-52-40.71*01-00-CityEHR-Form-BaseRegistration-admin&amp;mime=application/pdf </p>
+            <p>/ehr/api/getComposition/?userId=admin&amp;sessionId=863fa22fd0253e00333d96bb4417973a&amp;applicationId=TSO-13606-EHR_Extract-cityEHR&amp;patientId=K123456789&amp;compositionId=2023-10-26T20-52-40.71*01-00-CityEHR-Form-BaseRegistration-admin&amp;mime=application/pdf</p>
         </section>
     </body>
 </topic>
