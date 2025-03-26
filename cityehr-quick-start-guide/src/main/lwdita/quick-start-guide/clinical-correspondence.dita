@@ -13,28 +13,46 @@
             <p>The letter templates are created outside of cityEHR as any regular document using
                 LibreOffice Write or MS Word. An example of a template is shown below.</p>
             <p/>
-            <p><image href="images/letter-template.png" format="image/png"><alt> Letter Template for Patient Advice using LibreOffice Writer</alt></image>
+            <p>
+                <image href="images/letter-template.png" format="image/png">
+                    <alt> Letter Template for Patient Advice using LibreOffice Writer</alt>
+                </image>
             </p>
             <p>A Letter Template can contain any text and graphics, together with the fields which
                 reference content in the patient record. The text for those fields is then pulled into the template from the Letter in cityEHR with which the template is associated.</p>
-            <p/> 
+            <p/>
             <simpletable>
                 <strow>
-                    <stentry><p>#ISO-13606:Section:sectionId</p></stentry>
-                    <stentry><p>The values of all Elements for all Entries in the specified  Section</p></stentry>
+                    <stentry>
+                        <p>#ISO-13606:Section:sectionId</p>
+                    </stentry>
+                    <stentry>
+                        <p>The values of all Elements for all Entries in the specified  Section</p>
+                    </stentry>
                 </strow>
                 <strow>
-                    <stentry><p>#ISO-13606:Entry:entryId</p></stentry>
-                    <stentry><p>The values of all Elements in the specified Entry</p></stentry>
+                    <stentry>
+                        <p>#ISO-13606:Entry:entryId</p>
+                    </stentry>
+                    <stentry>
+                        <p>The values of all Elements in the specified Entry</p>
+                    </stentry>
                 </strow>
                 <strow>
-                    <stentry><p>#ISO-13606:Entry:entryId/#ISO-13606:Element:elementId</p></stentry>
-                    <stentry><p>The value of the specified Element</p></stentry>
+                    <stentry>
+                        <p>#ISO-13606:Entry:entryId/#ISO-13606:Element:elementId</p>
+                    </stentry>
+                    <stentry>
+                        <p>The value of the specified Element</p>
+                    </stentry>
                 </strow>
             </simpletable>
-            <p/> 
+            <p/>
             <p>Note that the components with the referenced identifiers must be present in the Letter with which the template is associated – if not, then the referenced field will be blank. When developing templates you can find the identifiers to use by accessing a Letter in cityEHR running in debugging mode. Click the check box to Show Ids and the identifiers for each component will be displayed.</p>
-            <p><image href="images/letters-ids-view.png" format="image/png"><alt>Show Ids When Running cityEHR in Debugging Mode</alt></image>
+            <p>
+                <image href="images/letters-ids-view.png" format="image/png">
+                    <alt>Show Ids When Running cityEHR in Debugging Mode</alt>
+                </image>
             </p>
         </section>
         <section id="Importing-and-Associating-a-Template">
@@ -48,17 +66,22 @@
                 </li>
                 <li>
                     <p>Pressing the red X button next to any existing template in the list allows you to change (re-import) the associated word processor file.</p>
-                    <p><image href="images/admin-manage-letter-temps.png" format="image/png"><alt>Letter templates</alt></image>
-            </p>
+                    <p>
+                        <image href="images/admin-manage-letter-temps.png" format="image/png">
+                            <alt>Letter templates</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Once your chosen template is loaded you can associate it with one or more Compositions in the clinical information model by selecting 'Manage Letters' then 'Associate Templates' within the cityEHR Administration page.</p>
-                    <p><image href="images/admin-assoc-temps.png" format="image/png"><alt>Associating letter templates with compositions</alt></image>
-            </p>
+                    <p>
+                        <image href="images/admin-assoc-temps.png" format="image/png">
+                            <alt>Associating letter templates with compositions</alt>
+                        </image>
+                    </p>
                 </li>
             </ol>
         </section>
-        
         <section id="Using-a-Template-with-a-Letter">
             <title>Using a Template with a Letter</title>
             <p>After your letter template has been uploaded into cityEHR, you can now navigate back to the patient you would like to complete a letter for.</p>
@@ -66,15 +89,22 @@
                 <li>
                     <p>Once you have completed your desired letter within cityEHR, select your desired print template from the drop-down 'Word Processor Template' list</p>
                     <p><b>Note: </b>The templates associated with a Letter are available to select after editing has begun.</p>
-                    <p><image href="images/letters-patient-advice.png" format="image/png"><alt>Patient advice letter template</alt></image></p>
+                    <p>
+                        <image href="images/letters-patient-advice.png" format="image/png">
+                            <alt>Patient advice letter template</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Click the word processor button on the right of the drop-down list and open the newly download file.</p>
                     <p><b>Note: </b>The name of the downloaded file is set to <i>'PatientId-letterName-date.odt'</i></p>
                 </li>
             </ol>
-            <p><image href="images/screenshot-edit-template.png" format="image/png"><alt>Screenshot of Letter template being edited</alt></image></p>
-            
+            <p>
+                <image href="images/screenshot-edit-template.png" format="image/png">
+                    <alt>Screenshot of Letter template being edited</alt>
+                </image>
+            </p>
         </section>
     </body>
 </topic>
