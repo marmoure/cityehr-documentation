@@ -4,23 +4,34 @@
     <title>Introduction</title>
     <shortdesc>This document describes the basic setup and features of the cityEHR starting from a standard, out-of-the-box installation.</shortdesc>
     <body>
-        <p>If you don't have an installation of cityEHR yet you should refer to the cityEHR Installation Guide. </p>
+        <p>If you don't have an installation of cityEHR yet you should refer to the cityEHR Installation Guide.</p>
         <p>If you have a standard installation running under Tomcat on your local machine, you can access cityEHR at <i>localhost:8080/cityehr</i>. For remote servers, replace '<i>localhost</i>' with the server's IP address.</p>
         <p>cityEHR is an XML-based application that uses only declarative programming languages, including XHTML, XML, XForms, XSLT, and XQuery, ensuring simplicity and flexibility in customization.</p>
         <p>The source code is located at <i>CATALINA_HOME/webapps/cityehr/WEB-INF/resources/apps/ehr</i>. Here, CATALINA_HOME refers to the base directory of your Tomcat installation.</p>
-        <p>If you have cityEHR installed with a different application server or you have changed the locations of the standard installation then you will need to find where the <i>resources/apps/ehr</i> directory is located in your installation. </p>
+        <p>If you have cityEHR installed with a different application server or you have changed the locations of the standard installation then you will need to find where the <i>resources/apps/ehr</i> directory is located in your installation.</p>
         <p>The remaining sections of this Guide cover;</p>
         <ul>
-            <li><p>Registering Patients</p></li>
-            <li><p>Entering and viewing clinical data</p></li>
-            <li><p>Annotating patient records</p></li>
-            <li><p>Viewing and plotting historical data</p></li>
-            <li><p>Finding patients</p></li>
-            <li><p>Creating cohorts of patients and exporting their data</p></li>
+            <li>
+                <p>Registering Patients</p>
+            </li>
+            <li>
+                <p>Entering and viewing clinical data</p>
+            </li>
+            <li>
+                <p>Annotating patient records</p>
+            </li>
+            <li>
+                <p>Viewing and plotting historical data</p>
+            </li>
+            <li>
+                <p>Finding patients</p>
+            </li>
+            <li>
+                <p>Creating cohorts of patients and exporting their data</p>
+            </li>
         </ul>
-        <p>This guide also introduces key administrative functions, such as accessing user resources, generating test data, managing users, and creating export data sets. Note that only a subset of administration functions is covered here. </p>
+        <p>This guide also introduces key administrative functions, such as accessing user resources, generating test data, managing users, and creating export data sets. Note that only a subset of administration functions is covered here.</p>
         <p>cityEHR is fully configurable, enabling clinicians to design secure, enterprise-scale health record systems that meet international standards while supporting locally defined data sets.</p>
         <p>Additionally, this Quick Start Guide demonstrates how to create a new EHR system from scratch, including building the information model, configuring patient labels, defining search criteria, and establishing cohort selection terms.</p>
-</body>
+    </body>
 </topic>
-

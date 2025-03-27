@@ -5,7 +5,7 @@
     <shortdesc>cityEHR has a role-based access control system that can be configured to restrict user
             access to specific functions, based on the role of the user. In addition, users can be restricted so that they can access only the data of patients
             who are assigned to the care team(s) of which that user is a member. </shortdesc>
-    <body> 
+    <body>
         <section id="Setting-Up-User-Roles">
             <title>Setting Up User Roles</title>
         </section>

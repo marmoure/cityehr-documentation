@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN" "topic.dtd">
 <topic id="creating-language-variants">
-        <title>Creating Language Variants</title>
-        <body>
-                <p>Create Language Pack </p>
-                <p> </p>
-                <p><image href="images/admin-manage-app-lang.png" format="image/png"><alt>Create new language pack</alt></image>
-                </p>
-                <p>Enable user selection of language </p>
-                <p><image href="images/admin-manage-app-lang-user-select.png" format="image/png"><alt>Enable user selection of language</alt></image>
-                </p>
-                <p> </p>
-        </body>
+    <title>Creating Language Variants</title>
+    <body>
+        <p>Create Language Pack</p>
+        <p/>
+        <p>
+            <image href="images/admin-manage-app-lang.png" format="image/png">
+                <alt>Create new language pack</alt>
+            </image>
+        </p>
+        <p>Enable user selection of language</p>
+        <p>
+            <image href="images/admin-manage-app-lang-user-select.png" format="image/png">
+                <alt>Enable user selection of language</alt>
+            </image>
+        </p>
+        <p/>
+    </body>
 </topic>

@@ -6,260 +6,363 @@
     <body>
         <section id="registering-a-new-patient">
             <title>Registering a New Patient</title>
-        <p>On install, the database for the cityEHR application does not contain any patient records. To start using cityEHR, the first step is to create patient records via the patient registration page.</p>
-        <ol>
-            <li>
-                <p>Log in using the default credentials:</p>
-                <ul>
-                    <li><p><b>Username:</b> admin</p></li>
-                    <li><p><b>Password:</b> password</p></li>
-                </ul>
-            </li>
-            <li>
-                <p>Click the <b>Registration</b> button in the System Navigation pane to access the registration form.</p>
-                <p><image href="images/patient-reg-form.png" format="image/png"><alt>Patient Registration Form</alt></image></p>
-            </li>
-            <li>
-                <p>Enter a <b>Hospital Number</b>, which is a mandatory field (highlighted in pink) and serves as the unique patient identifier. All other fields are optional.</p>
-            </li>
-            <li>
-                <p>Fill in patient details (e.g., NHS Number, Title, Forename) manually or use the <b>Find Demographics</b> service:</p>
-                <ul>
-                    <li>
-                        <p>Enter the NHS Number (simulating a national patient identifier).</p></li>
-                    <li>
-                        <p>Check the <b>Find Demographics</b> checkbox, which appears after entering the NHS Number.</p></li>
-                    <li>
-                        <p>The demographics service populates remaining fields with simulated data or, in live systems, pulls data from EPR or national services.</p>
-                    </li>
-                </ul>
-                <p><image href="images/patient-reg-find-demographics.png" format="image/png"><alt>Patient Registration “Find Demographics” Lookup Service</alt></image></p>
-             </li>
-            <li>
-                <p>Similarily, Fill in GP details manually or use the <b>Find GP</b> service:</p>
-                <ul>
-                    <li>
-                        <p>Enter <i>Oxford</i> in the Town/City field.</p>
-                    </li>
-                    <li>
-                        <p>Check the <b>Find GP</b> checkbox to display two options. Select one to auto-fill GP details.</p>
-                    </li>
-                </ul>
-                <p><image href="images/patient-reg-find-gp.png" format="image/png"><alt>Find GP Service</alt></image></p>
-            </li>
-            <li>
-                <p>Once all the details are entered (either by typing in the fields or by using the lookup services). Click the <b>Register</b> button (hover over it to see the label).</p>
-                <p><image href="images/patient-reg-button.png" format="image/png"><alt>Register Button</alt></image></p>
-            </li>
-            <li>
-                <p>If successful, confirm the action in the dialogue box and choose the next navigation step (default: <i>Hospital Anxiety and Depression Scale form</i>).</p>
-            </li>
-            <li>
-                <p>If the Hospital Number is missing or already exists, an error message will appear. Dismiss it, update the field, and try again.</p>
-            </li>
-            <li>
-                <p>Once registered, a confirmation message is displayed, completing the patient registration process.</p>
-                <p><image href="images/patient-reg-confirmation.png" format="image/png"><alt>Confirmation of Patient Registration</alt></image></p>
-            </li>
-        </ol>
+            <p>On install, the database for the cityEHR application does not contain any patient records. To start using cityEHR, the first step is to create patient records via the patient registration page.</p>
+            <ol>
+                <li>
+                    <p>Log in using the default credentials:</p>
+                    <ul>
+                        <li>
+                            <p><b>Username:</b> admin</p>
+                        </li>
+                        <li>
+                            <p><b>Password:</b> password</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Click the <b>Registration</b> button in the System Navigation pane to access the registration form.</p>
+                    <p>
+                        <image href="images/patient-reg-form.png" format="image/png">
+                            <alt>Patient Registration Form</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>Enter a <b>Hospital Number</b>, which is a mandatory field (highlighted in pink) and serves as the unique patient identifier. All other fields are optional.</p>
+                </li>
+                <li>
+                    <p>Fill in patient details (e.g., NHS Number, Title, Forename) manually or use the <b>Find Demographics</b> service:</p>
+                    <ul>
+                        <li>
+                            <p>Enter the NHS Number (simulating a national patient identifier).</p>
+                        </li>
+                        <li>
+                            <p>Check the <b>Find Demographics</b> checkbox, which appears after entering the NHS Number.</p>
+                        </li>
+                        <li>
+                            <p>The demographics service populates remaining fields with simulated data or, in live systems, pulls data from EPR or national services.</p>
+                        </li>
+                    </ul>
+                    <p>
+                        <image href="images/patient-reg-find-demographics.png" format="image/png">
+                            <alt>Patient Registration “Find Demographics” Lookup Service</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>Similarily, Fill in GP details manually or use the <b>Find GP</b> service:</p>
+                    <ul>
+                        <li>
+                            <p>Enter <i>Oxford</i> in the Town/City field.</p>
+                        </li>
+                        <li>
+                            <p>Check the <b>Find GP</b> checkbox to display two options. Select one to auto-fill GP details.</p>
+                        </li>
+                    </ul>
+                    <p>
+                        <image href="images/patient-reg-find-gp.png" format="image/png">
+                            <alt>Find GP Service</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>Once all the details are entered (either by typing in the fields or by using the lookup services). Click the <b>Register</b> button (hover over it to see the label).</p>
+                    <p>
+                        <image href="images/patient-reg-button.png" format="image/png">
+                            <alt>Register Button</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>If successful, confirm the action in the dialogue box and choose the next navigation step (default: <i>Hospital Anxiety and Depression Scale form</i>).</p>
+                </li>
+                <li>
+                    <p>If the Hospital Number is missing or already exists, an error message will appear. Dismiss it, update the field, and try again.</p>
+                </li>
+                <li>
+                    <p>Once registered, a confirmation message is displayed, completing the patient registration process.</p>
+                    <p>
+                        <image href="images/patient-reg-confirmation.png" format="image/png">
+                            <alt>Confirmation of Patient Registration</alt>
+                        </image>
+                    </p>
+                </li>
+            </ol>
         </section>
         <section id="entering-patient-data">
             <title>Entering Patient Data</title>
-        <ol>
-            <li>
-                <p>After registration, navigate to the <b>Forms</b> tab to access patient data entry forms. If the page does not load automatically, click the <b>Forms</b> tab.</p>
-                <p><image href="images/locating-form-page.png" format="image/png"><alt>Locating Forms Page</alt></image></p>
-            </li>
-            <li>
-                <p>You will be presented with a list of new forms that can be entered for this patient. The forms are listed in various 'contexts of care' with the top category 'cityEHR Feature Demo' containing all the forms available and the others containing smaller sets of forms for Administration and for Clinical Care. </p>
-            </li>
-        </ol>
-            
-        <p><b>Form with Enumerated Values and Calculated Data</b></p>
-        <ol>
-            <li>
-                <p>Forms can now be selected to enter new patient data. For this example the <b>Hospital Anxiety and Depression Scale (HADS)</b> will be used. Select the Form from the left navigation menu.</p>
-                <p><image href="images/form-hads-empty.png" format="image/png"><alt>Hospital Anxiety and Depression Scale Form</alt></image></p>
-            </li>
-            <li>
-                <p>The form will load and you can now enter data into the fields by answering each question using the drop down menu selections. For this test, it doesn't really matter how you answer the questions – ensure you continue to the bottom of the page and select an answer for every question. </p>
-            </li>
-            <li>
-                <p>At the top of the HADS form are two calculated entries for Anxiety Score and Depression Score. These will be calculated when all the questions have been answered. </p>
-                <p><image href="images/form-hads-filled.png" format="image/png"><alt>HADS Form: Anxiety and Depression Scores</alt></image></p>
-            </li>
-            <li>
-                <p>Once you have finished entering data you can <b>Publish</b> the form to the patient record by clicking Publish in the EHR view controls. </p>
-                <p><image href="images/form-hads-publishing.png" format="image/png"><alt>Publishing Completed HADS Form to the Patient Record</alt></image></p>
-            </li>
-            <li>
-                <p>Select the <b>Commit Form</b> button with the radio button <b>Show patient record</b> selected. </p>
-            </li>
-            <li>
-                <p>Once the data have been committed to the patient record you will be moved back to the patient record folder displaying a list of all data in the record for your patient, including the HADS data just completed. </p>
-                <p><image href="images/events-hads-form.png" format="image/png"><alt>Patient Record Folder with Completed Hospital Anxiety and Depression Scale Form</alt></image></p>
-            </li>
-        </ol>
-        <p><b>Form with Graphical Data Input</b></p>
-        <ol>
-            <li>
-                <p>Return to the <b>Forms</b> tab and select the form for <b>DAS 28.</b> This form records the Disease Activity Score for the patient, by selecting joints that are either tender or swollen. The input of tender or swollen joints is made by clicking on the appropriate area in the homunculus image. </p>
-                <p><image href="images/form-das28-filled.png" format="image/png"><alt>Disease Activity Score (DAS) 28 Form</alt></image></p>
-            </li>
-            <li>
-                <p>As you click to select the tender and swollen joints you will see the counts changing. Enter values for ESR (e.g. 2.3) and Visual Analogue Score (e.g. 4) and the DAS Score will calculate.</p>
-            </li>
-            <li>
-                <p>The DAS Score will be recalculated each time you select a tender or swollen joint or change either the ESR or Visual Analogue Score. </p>
-            </li>
-            <li>
-                <p>Once you have finished entering data you can <b>Publish</b> the form to the patient record by clicking the Publish button as before. Confirm the action and the DAS 28 data stored in the patient record. </p>
-            </li>
-            <li>
-                <p>Select <b>Commit Form</b> on the Dialogue Box that appears after clicking Publish. </p>
-                <p><image href="images/form-das28-publishing.png" format="image/png"><alt>Committing Completed Disease Activity Score (DAS) 28 Form</alt></image></p>
-            </li>
-            <li>
-                <p>The patient record now displays the event, with the data you recorded.</p>
-                <p><b>Note: </b>This does not include the homunculus graphics that was used for data entry.</p>
-                <p><image href="images/events-das28-form.png" format="image/png"><alt>Event Displayed in the Patient Record </alt></image></p>
-            </li>
-            <li>
-                <p>Return to the <b>Forms</b> tab and select the <b>Family History</b> form from the left navigation menu. </p>
-                <p><b>Note: </b>You may need to reduce the resolution of the page to fit the display of the form shown below, or you can press the small Hide button to collapse the left hand navigation pane and give more room for the form.</p>
-                <p><image href="images/form-famhist-filled.png" format="image/png"><alt>Family History Form</alt></image></p>
-            </li>
-            <li>
-                <p>This form has a representation of the family tree for the patient. Click on people icons in the image to select a family member – this will then add a new line to the list of family members where you can fill out the date and details of a general diagnosis for that person.</p>
-            </li>
-            <li>
-                <p>To enter the diagnosis you can either press the <b>'...'</b> button to the right of the empty field, or begin typing for an auto-complete of the diagnosis.</p>
-            </li>
-            <li>
-                <p>You can also add family members by clicking the small <b>'+'</b> button at the top of the family history list, or remove a family member by pressing the <b>'x'</b> button next to the family member. </p>
-            </li>
-            <li>
-                <p>Once again, publish the form to the patient record when you are done. </p>
-                <p><image href="images/form-famhist-drop-down.png" format="image/png"><alt>Selecting the Diagnosis from a Drop-down</alt></image></p>
-            </li>
-        </ol> 
-        <p><b>Form with Sorting of Entries and Conditional Elements</b></p>
-        <ol>
-            <li>
-                <p>Within the <b>Medication Record</b> Form, you can enter data for either Current Medications or Previous Medications by pressing the appropriate <b>'+'</b> button. </p>
-            </li>
-            <li>
-                <p>To enter the name of the medication you can either start typing in the input box, or select <b>'…'</b> to the right ofthe empty field, which will bring up an expandable list of medications from which you can select.</p>
-                <p><image href="images/form-medrecord-drop-down.png" format="image/png"><alt>Medication Form’s Expandable List of Medications</alt></image></p>
-            </li>
-            <li>
-                <p>When typing the name of the medication you will either get a single medication filled out automatically as soon as your input matches it uniquely, or a drop-down selection of matching medications. </p>
-            </li>
-            <li>
-                <p>Once you've added a collection of medications, try checking or unchecking the <b>Stopped</b> button. When you do this, the medication will be moved between the lists for Current or Previous Medications.</p>
-            </li>
-            <li>
-                <p>Publish the form to the patient record when you are done.</p>
-                <p><image href="images/form-medrecord-current-vs-stopped.png" format="image/png"><alt>Categorization of Current and Stopped Medications</alt></image></p>
-            </li>
-        </ol>
-            
-        <p><b>Form with Multiple Entries, Calculations and Pre-Filled Data</b></p>
-        <ol>
-            <li>
-                <p>Navigate to the <b>Body Mass Index</b> Form.</p>
-            </li>
-            <li>
-                <p>On this form you can enter a set of measurements for height and weight of the patient on various dates – the Body Mass Index (BMI) will be calculated, along with the average height and weight for the patient. </p>
-            </li>
-            <li>
-                <p>Publish the form. </p>
-            </li>
-            <li>
-                <p>Now return to the <b>Forms</b> tab and select the <b>Body Mass Index</b> form again. </p>
-            </li>
-            <li>
-                <p>The form will be pre-filled with the entries added in the previous step.</p>
-            </li>
-            <li>
-                <p>New entries can be added, however published ones cannot be removed or edited.</p>
-                <p><b>Note: </b>The information model defining this behaviour can be set up to allow previous entries to be updated and/or deleted.</p>
-                <p><image href="images/form-bmi-filled.png" format="image/png"><alt>Body Mass Index Form with Calculations </alt></image></p>
-            </li>
-        </ol>
-            
-        <p><b>Form with Enumerated Class and Supplementary Data</b> </p>
-        <ol>
-            <li>
-                <p>Navigate to the <b>Diagnosis</b> Form. </p>
-            </li>
-            <li>
-                <p>Press the <b>'+'</b> button to add a new diagnosis. </p>
-            </li>
-            <li>
-                <p>Select <b>'...'</b> to browse avaliable diagnoses or use the auto-complete (e.g. type sw...)</p>
-            </li>
-            <li>
-                <p>Depending on the diagnosis you select, you may see an additional <b>SDS</b> to the right of the diagnosis once it is selected.</p>
-            </li>
-            <li>
-                <p>Select this button to see the Supplementation Data Set dialogue. </p>
-                <p><image href="images/form-diagnosis-supp-data-set.png" format="image/png"><alt>Entering a Supplementary Data Set</alt></image></p>
-            </li>
-            <li>
-                <p>Complete the required data for the dialogue box and select <b>OK</b> when completed.</p>
-                <p>The supplementary data is displayed next to the diagnosis it is associated with.</p>
-                <p><image href="images/form-diagnosis-filled.png" format="image/png"><alt>Display of Supplementary Data Set</alt></image></p>
-            </li>
-            <li>
-                <p>Now add a diagnostics image by selecting the <b>Browse</b> button from Diagnostic Image.</p>
-            </li>
-            <li>
-                <p>Navigate to a file on the file system to upload that image to the record. </p>
-                <p><b>Note: </b>The image is stored directly in the current composition when it is committed to the patient record – this feature is designed for informal images as the type that might be capture in a mobile phone, not full diagnostic images capture using some imaging modality – any such images would be managed in the PACS, not the EHR. </p>
-            </li>
-            <li>
-                <p>Once the image has been uploaded it is displayed inline on the form. </p>
-                <p><image href="images/form-diagnosis-uploaded-image.png" format="image/png"><alt>Diagnostic Image Uploaded from the File system</alt></image></p>
-            </li>
-            <li>
-                <p>Select the <b>Publish</b> to commit the form to the record and navigate to the patient <b>Events.</b></p>
-            </li>
-            <li>
-                <p>The data recorded in now saved and displayed in the patient record, including the uploaded image.</p>
-            </li>
-        </ol>
+            <ol>
+                <li>
+                    <p>After registration, navigate to the <b>Forms</b> tab to access patient data entry forms. If the page does not load automatically, click the <b>Forms</b> tab.</p>
+                    <p>
+                        <image href="images/locating-form-page.png" format="image/png">
+                            <alt>Locating Forms Page</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>You will be presented with a list of new forms that can be entered for this patient. The forms are listed in various 'contexts of care' with the top category 'cityEHR Feature Demo' containing all the forms available and the others containing smaller sets of forms for Administration and for Clinical Care.</p>
+                </li>
+            </ol>
+            <p><b>Form with Enumerated Values and Calculated Data</b></p>
+            <ol>
+                <li>
+                    <p>Forms can now be selected to enter new patient data. For this example the <b>Hospital Anxiety and Depression Scale (HADS)</b> will be used. Select the Form from the left navigation menu.</p>
+                    <p>
+                        <image href="images/form-hads-empty.png" format="image/png">
+                            <alt>Hospital Anxiety and Depression Scale Form</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>The form will load and you can now enter data into the fields by answering each question using the drop down menu selections. For this test, it doesn't really matter how you answer the questions – ensure you continue to the bottom of the page and select an answer for every question.</p>
+                </li>
+                <li>
+                    <p>At the top of the HADS form are two calculated entries for Anxiety Score and Depression Score. These will be calculated when all the questions have been answered.</p>
+                    <p>
+                        <image href="images/form-hads-filled.png" format="image/png">
+                            <alt>HADS Form: Anxiety and Depression Scores</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>Once you have finished entering data you can <b>Publish</b> the form to the patient record by clicking Publish in the EHR view controls.</p>
+                    <p>
+                        <image href="images/form-hads-publishing.png" format="image/png">
+                            <alt>Publishing Completed HADS Form to the Patient Record</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>Select the <b>Commit Form</b> button with the radio button <b>Show patient record</b> selected.</p>
+                </li>
+                <li>
+                    <p>Once the data have been committed to the patient record you will be moved back to the patient record folder displaying a list of all data in the record for your patient, including the HADS data just completed.</p>
+                    <p>
+                        <image href="images/events-hads-form.png" format="image/png">
+                            <alt>Patient Record Folder with Completed Hospital Anxiety and Depression Scale Form</alt>
+                        </image>
+                    </p>
+                </li>
+            </ol>
+            <p><b>Form with Graphical Data Input</b></p>
+            <ol>
+                <li>
+                    <p>Return to the <b>Forms</b> tab and select the form for <b>DAS 28.</b> This form records the Disease Activity Score for the patient, by selecting joints that are either tender or swollen. The input of tender or swollen joints is made by clicking on the appropriate area in the homunculus image.</p>
+                    <p>
+                        <image href="images/form-das28-filled.png" format="image/png">
+                            <alt>Disease Activity Score (DAS) 28 Form</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>As you click to select the tender and swollen joints you will see the counts changing. Enter values for ESR (e.g. 2.3) and Visual Analogue Score (e.g. 4) and the DAS Score will calculate.</p>
+                </li>
+                <li>
+                    <p>The DAS Score will be recalculated each time you select a tender or swollen joint or change either the ESR or Visual Analogue Score.</p>
+                </li>
+                <li>
+                    <p>Once you have finished entering data you can <b>Publish</b> the form to the patient record by clicking the Publish button as before. Confirm the action and the DAS 28 data stored in the patient record.</p>
+                </li>
+                <li>
+                    <p>Select <b>Commit Form</b> on the Dialogue Box that appears after clicking Publish.</p>
+                    <p>
+                        <image href="images/form-das28-publishing.png" format="image/png">
+                            <alt>Committing Completed Disease Activity Score (DAS) 28 Form</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>The patient record now displays the event, with the data you recorded.</p>
+                    <p><b>Note: </b>This does not include the homunculus graphics that was used for data entry.</p>
+                    <p>
+                        <image href="images/events-das28-form.png" format="image/png">
+                            <alt>Event Displayed in the Patient Record </alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>Return to the <b>Forms</b> tab and select the <b>Family History</b> form from the left navigation menu.</p>
+                    <p><b>Note: </b>You may need to reduce the resolution of the page to fit the display of the form shown below, or you can press the small Hide button to collapse the left hand navigation pane and give more room for the form.</p>
+                    <p>
+                        <image href="images/form-famhist-filled.png" format="image/png">
+                            <alt>Family History Form</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>This form has a representation of the family tree for the patient. Click on people icons in the image to select a family member – this will then add a new line to the list of family members where you can fill out the date and details of a general diagnosis for that person.</p>
+                </li>
+                <li>
+                    <p>To enter the diagnosis you can either press the <b>'...'</b> button to the right of the empty field, or begin typing for an auto-complete of the diagnosis.</p>
+                </li>
+                <li>
+                    <p>You can also add family members by clicking the small <b>'+'</b> button at the top of the family history list, or remove a family member by pressing the <b>'x'</b> button next to the family member.</p>
+                </li>
+                <li>
+                    <p>Once again, publish the form to the patient record when you are done.</p>
+                    <p>
+                        <image href="images/form-famhist-drop-down.png" format="image/png">
+                            <alt>Selecting the Diagnosis from a Drop-down</alt>
+                        </image>
+                    </p>
+                </li>
+            </ol>
+            <p><b>Form with Sorting of Entries and Conditional Elements</b></p>
+            <ol>
+                <li>
+                    <p>Within the <b>Medication Record</b> Form, you can enter data for either Current Medications or Previous Medications by pressing the appropriate <b>'+'</b> button.</p>
+                </li>
+                <li>
+                    <p>To enter the name of the medication you can either start typing in the input box, or select <b>'…'</b> to the right ofthe empty field, which will bring up an expandable list of medications from which you can select.</p>
+                    <p>
+                        <image href="images/form-medrecord-drop-down.png" format="image/png">
+                            <alt>Medication Form’s Expandable List of Medications</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>When typing the name of the medication you will either get a single medication filled out automatically as soon as your input matches it uniquely, or a drop-down selection of matching medications.</p>
+                </li>
+                <li>
+                    <p>Once you've added a collection of medications, try checking or unchecking the <b>Stopped</b> button. When you do this, the medication will be moved between the lists for Current or Previous Medications.</p>
+                </li>
+                <li>
+                    <p>Publish the form to the patient record when you are done.</p>
+                    <p>
+                        <image href="images/form-medrecord-current-vs-stopped.png" format="image/png">
+                            <alt>Categorization of Current and Stopped Medications</alt>
+                        </image>
+                    </p>
+                </li>
+            </ol>
+            <p><b>Form with Multiple Entries, Calculations and Pre-Filled Data</b></p>
+            <ol>
+                <li>
+                    <p>Navigate to the <b>Body Mass Index</b> Form.</p>
+                </li>
+                <li>
+                    <p>On this form you can enter a set of measurements for height and weight of the patient on various dates – the Body Mass Index (BMI) will be calculated, along with the average height and weight for the patient.</p>
+                </li>
+                <li>
+                    <p>Publish the form.</p>
+                </li>
+                <li>
+                    <p>Now return to the <b>Forms</b> tab and select the <b>Body Mass Index</b> form again.</p>
+                </li>
+                <li>
+                    <p>The form will be pre-filled with the entries added in the previous step.</p>
+                </li>
+                <li>
+                    <p>New entries can be added, however published ones cannot be removed or edited.</p>
+                    <p><b>Note: </b>The information model defining this behaviour can be set up to allow previous entries to be updated and/or deleted.</p>
+                    <p>
+                        <image href="images/form-bmi-filled.png" format="image/png">
+                            <alt>Body Mass Index Form with Calculations </alt>
+                        </image>
+                    </p>
+                </li>
+            </ol>
+            <p><b>Form with Enumerated Class and Supplementary Data</b></p>
+            <ol>
+                <li>
+                    <p>Navigate to the <b>Diagnosis</b> Form.</p>
+                </li>
+                <li>
+                    <p>Press the <b>'+'</b> button to add a new diagnosis.</p>
+                </li>
+                <li>
+                    <p>Select <b>'...'</b> to browse avaliable diagnoses or use the auto-complete (e.g. type sw...)</p>
+                </li>
+                <li>
+                    <p>Depending on the diagnosis you select, you may see an additional <b>SDS</b> to the right of the diagnosis once it is selected.</p>
+                </li>
+                <li>
+                    <p>Select this button to see the Supplementation Data Set dialogue.</p>
+                    <p>
+                        <image href="images/form-diagnosis-supp-data-set.png" format="image/png">
+                            <alt>Entering a Supplementary Data Set</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>Complete the required data for the dialogue box and select <b>OK</b> when completed.</p>
+                    <p>The supplementary data is displayed next to the diagnosis it is associated with.</p>
+                    <p>
+                        <image href="images/form-diagnosis-filled.png" format="image/png">
+                            <alt>Display of Supplementary Data Set</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>Now add a diagnostics image by selecting the <b>Browse</b> button from Diagnostic Image.</p>
+                </li>
+                <li>
+                    <p>Navigate to a file on the file system to upload that image to the record.</p>
+                    <p><b>Note: </b>The image is stored directly in the current composition when it is committed to the patient record – this feature is designed for informal images as the type that might be capture in a mobile phone, not full diagnostic images capture using some imaging modality – any such images would be managed in the PACS, not the EHR.</p>
+                </li>
+                <li>
+                    <p>Once the image has been uploaded it is displayed inline on the form.</p>
+                    <p>
+                        <image href="images/form-diagnosis-uploaded-image.png" format="image/png">
+                            <alt>Diagnostic Image Uploaded from the File system</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>Select the <b>Publish</b> to commit the form to the record and navigate to the patient <b>Events.</b></p>
+                </li>
+                <li>
+                    <p>The data recorded in now saved and displayed in the patient record, including the uploaded image.</p>
+                </li>
+            </ol>
         </section>
         <section id="finding-patients">
             <title>Finding Patients</title>
-            <p>Once patients are recorded in your database, you can search for them and select the desired patient to view their record or input data.</p>      
-        <ol>
-            <li>
-                <p>Click the <b>Patient Search</b> button in the purple system navigation pane at the top of the page to open the search form, as shown below.</p>
-                <p><image href="images/patient-search-empty.png" format="image/png"><alt>Patient Search Form</alt></image></p>
-            </li>
-            <li>
-                <p>Enter your search criteria and click the <b>Search</b> button at the top of the form. You can also press <b>Enter</b> after typing in any text input field. Hovering your mouse over the button will display its name.</p>
-            </li>
-            <li>
-                <p>For test patient data, try searching using a common letter in the surname or a patient identifier. For example, entering "K" may return results if the default format for patient identifiers was used when generating the test data.</p>
-                <p><image href="images/patient-search-filled.png" format="image/png"><alt>Searching Patients with Patient ID using “K” as a Patient Identifier</alt></image></p>
-            </li>
-            <li>
-                <p>The search results will display basic demographic details of matching patients:</p>
-                <ul>
-                    <li><p>If no results are found, a notification will appear.</p></li>
-                    <li><p>If too many patients match your criteria (e.g., searching for "Male"), you’ll be prompted to enter more specific search criteria.</p></li>
-                </ul>
-            </li>
-            <li>
-                <p>When patients are found, the list will display even if only one result matches. This allows you to confirm the correct patient before viewing their record.</p>
-                <p><image href="images/patient-search-selecting.png" format="image/png"><alt>List of Patients Found Using Patient Search</alt></image></p>
-            </li>
-            <li>
-                <p>Click a patient from the list to access their default summary view. This view includes features for reviewing, charting, and annotating the record. The next exercise will guide you through these functionalities.</p>
-            </li>
-        </ol>
+            <p>Once patients are recorded in your database, you can search for them and select the desired patient to view their record or input data.</p>
+            <ol>
+                <li>
+                    <p>Click the <b>Patient Search</b> button in the purple system navigation pane at the top of the page to open the search form, as shown below.</p>
+                    <p>
+                        <image href="images/patient-search-empty.png" format="image/png">
+                            <alt>Patient Search Form</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>Enter your search criteria and click the <b>Search</b> button at the top of the form. You can also press <b>Enter</b> after typing in any text input field. Hovering your mouse over the button will display its name.</p>
+                </li>
+                <li>
+                    <p>For test patient data, try searching using a common letter in the surname or a patient identifier. For example, entering "K" may return results if the default format for patient identifiers was used when generating the test data.</p>
+                    <p>
+                        <image href="images/patient-search-filled.png" format="image/png">
+                            <alt>Searching Patients with Patient ID using “K” as a Patient Identifier</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>The search results will display basic demographic details of matching patients:</p>
+                    <ul>
+                        <li>
+                            <p>If no results are found, a notification will appear.</p>
+                        </li>
+                        <li>
+                            <p>If too many patients match your criteria (e.g., searching for "Male"), you’ll be prompted to enter more specific search criteria.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>When patients are found, the list will display even if only one result matches. This allows you to confirm the correct patient before viewing their record.</p>
+                    <p>
+                        <image href="images/patient-search-selecting.png" format="image/png">
+                            <alt>List of Patients Found Using Patient Search</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>Click a patient from the list to access their default summary view. This view includes features for reviewing, charting, and annotating the record. The next exercise will guide you through these functionalities.</p>
+                </li>
+            </ol>
         </section>
     </body>
 </topic>
