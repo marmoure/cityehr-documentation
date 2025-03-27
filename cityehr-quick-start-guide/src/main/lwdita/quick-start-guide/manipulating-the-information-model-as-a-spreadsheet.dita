@@ -2,10 +2,13 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN" "topic.dtd">
 <topic id="manipulating-the-information-model-as-a-spreadsheet">
     <title>Manipulating the Information Model as a Spreadsheet</title>
-    <shortdesc></shortdesc>
+    <shortdesc/>
     <body>
         <p>If you have administrative access, your Administration Page, Figure 109.</p>
-        <p><image href="images/admin-view.png" format="image/png"><alt>Administration Page</alt></image>
+        <p>
+            <image href="images/admin-view.png" format="image/png">
+                <alt>Administration Page</alt>
+            </image>
         </p>
         <p>Manipulating the information model as an ontology is quite difficult and it is easy tomake a mistake. There are several underlying reasons for this:</p>
         <ul>
@@ -37,7 +40,11 @@
             </li>
             <li>
                 <p>In the column called Form Id enter an identity for your form - this must use only the characters a-zA-Z0-9 (i.e. no spaces or special characters, including dashes). The form will use the Display Name you enter in the second column - this is the title of the form and can contain any characters, including spaces and special characters. We will set our Form ID to Test Form and Display Name to Test Form so that it is easily identifiable in the interface.</p>
-                <p><image href="images/featuredemo-spreadsheet.png" format="image/png"><alt>Specialty - Feature Demo.ods Information Model </alt></image></p>
+                <p>
+                    <image href="images/featuredemo-spreadsheet.png" format="image/png">
+                        <alt>Specialty - Feature Demo.ods Information Model </alt>
+                    </image>
+                </p>
             </li>
             <li>
                 <p>The Rank column determines the order in which your form will be listed, relative to the other forms already defined - enter a low number to see it near the top of the list or a high number to see it at the bottom</p>
@@ -63,7 +70,11 @@
             </li>
             <li>
                 <p>Back in the cityEHR interface, navigate to the Admin page and select Import Information Model from the list of selections on the left.</p>
-                <p><image href="images/admin-info-model.png" format="image/png"><alt>Navigating to the Information Model page</alt></image></p>
+                <p>
+                    <image href="images/admin-info-model.png" format="image/png">
+                        <alt>Navigating to the Information Model page</alt>
+                    </image>
+                </p>
             </li>
             <li>
                 <p>Browse to the information model spreadsheet you have just created and press to open it. The file will now be 'uploaded' to the cityEHR server. Once that has completed, an Import button will appear on the right of the display screen.</p>
@@ -76,7 +87,11 @@
             </li>
             <li>
                 <p>If the model loaded successfully you can now navigate to the Patient Search page, find a patient, select Forms and you should see your new form available in the list of forms to create.</p>
-                <p><image href="images/forms-view-new.png" format="image/png"><alt>Forms page displaying new form </alt></image></p>
+                <p>
+                    <image href="images/forms-view-new.png" format="image/png">
+                        <alt>Forms page displaying new form </alt>
+                    </image>
+                </p>
             </li>
         </ol>
     </body>

@@ -9,19 +9,35 @@
             <ol>
                 <li>
                     <p>The full record for an individual patient can be exported from the patient Events page. Click on a patient in Patient Search for whom you would like to export their record.</p>
-                    <p><image href="images/patient-search-select.png" format="image/png"><alt>Selecting a Patient for Record Export</alt></image></p>
+                    <p>
+                        <image href="images/patient-search-select.png" format="image/png">
+                            <alt>Selecting a Patient for Record Export</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Navigate from the <b>Summaries</b> page to the <b>Events</b> page.</p>
-                    <p><image href="images/events-view-select.png" format="image/png"><alt>Navigating to Patient Events Page</alt></image></p>
+                    <p>
+                        <image href="images/events-view-select.png" format="image/png">
+                            <alt>Navigating to Patient Events Page</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Select the event you would like to export.</p>
-                    <p><image href="images/events-select.png" format="image/png"><alt>Selecting Patient Event to Export</alt></image></p>
+                    <p>
+                        <image href="images/events-select.png" format="image/png">
+                            <alt>Selecting Patient Event to Export</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Click the <b>Export Record</b> icon to export the individual patient data.</p>
-                    <p><image href="images/events-lifestyle-export.png" format="image/png"><alt>Selecting Patient Event to Export</alt></image></p>
+                    <p>
+                        <image href="images/events-lifestyle-export.png" format="image/png">
+                            <alt>Selecting Patient Event to Export</alt>
+                        </image>
+                    </p>
                 </li>
             </ol>
         </section>
@@ -34,30 +50,54 @@
                 </li>
                 <li>
                     <p>Navigate to <b>Cohort Searches</b> in the menu on the left side of the screen, and then click <b>Manage Cohort Searches</b>.</p>
-                    <p><image href="images/admin-manage-cohort-search.png" format="image/png"><alt>Manage Cohort Searches Page</alt></image></p>
+                    <p>
+                        <image href="images/admin-manage-cohort-search.png" format="image/png">
+                            <alt>Manage Cohort Searches Page</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>View your saved cohort searches in the main display screen.</p>
                 </li>
                 <li>
                     <p>Select the box next to the cohort search you wish to export.</p>
-                    <p><image href="images/admin-cohort-search-select.png" format="image/png"><alt>Selecting Desired Cohort Search for Export</alt></image></p>
+                    <p>
+                        <image href="images/admin-cohort-search-select.png" format="image/png">
+                            <alt>Selecting Desired Cohort Search for Export</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Click the <b>Export</b> button that appears at the top right of your screen.</p>
-                    <p><image href="images/admin-cohort-search-export.png" format="image/png"><alt>Exporting Desired Cohort Search</alt></image></p>
+                    <p>
+                        <image href="images/admin-cohort-search-export.png" format="image/png">
+                            <alt>Exporting Desired Cohort Search</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>A dialogue box will appear. Save your exported file or open it with a default application.</p>
-                    <p><image href="images/admin-cohort-search-dialogue.png" format="image/png"><alt>Cohort Export Dialogue Box</alt></image></p>
+                    <p>
+                        <image href="images/admin-cohort-search-dialogue.png" format="image/png">
+                            <alt>Cohort Export Dialogue Box</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>For this example, open the file with <b>Microsoft Edge</b>.</p>
-                    <p><image href="images/admin-cohort-search-extract-export.png" format="image/png"><alt>Extracting the Exported Cohort File’s XML Contents</alt></image></p>
+                    <p>
+                        <image href="images/admin-cohort-search-extract-export.png" format="image/png">
+                            <alt>Extracting the Exported Cohort File’s XML Contents</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Extract the XML contents, and a new window will open displaying the XML of the exported data.</p>
-                    <p><image href="images/extracted-cohort-data.png" format="image/png"><alt>Window displaying extracted cohort XML file</alt></image></p>
+                    <p>
+                        <image href="images/extracted-cohort-data.png" format="image/png">
+                            <alt>Window displaying extracted cohort XML file</alt>
+                        </image>
+                    </p>
                 </li>
             </ol>
         </section>
@@ -69,15 +109,27 @@
                 </li>
                 <li>
                     <p>Navigate to <b>Export Data Sets</b> in the menu on the left side of the screen.</p>
-                    <p><image href="images/admin-manage-export-data.png" format="image/png"><alt>Manage Export Data Sets Page</alt></image></p>
+                    <p>
+                        <image href="images/admin-manage-export-data.png" format="image/png">
+                            <alt>Manage Export Data Sets Page</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Enter a name for your data set.</p>
-                    <p><image href="images/admin-manage-export-data-naming.png" format="image/png"><alt>Naming the Data Set</alt></image></p>
+                    <p>
+                        <image href="images/admin-manage-export-data-naming.png" format="image/png">
+                            <alt>Naming the Data Set</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Select the entries you want to add to your exported data set. These will appear in the column on the right. You can also filter entries by composition by using the drop-down menu next to <b>Composition</b>.</p>
-                    <p><image href="images/admin-manage-export-data-select-entries.png" format="image/png"><alt>Selecting Entries to Add to Exported Data Set</alt></image></p>
+                    <p>
+                        <image href="images/admin-manage-export-data-select-entries.png" format="image/png">
+                            <alt>Selecting Entries to Add to Exported Data Set</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Click the <b>Save</b> button at the top right of the display window.</p>

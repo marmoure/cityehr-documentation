@@ -7,7 +7,11 @@
         <section id="browsing-logical-databases">
             <title>Browsing Logical Databases</title>
             <p>Open the <b>Administration</b> page and select <b>Browse Logical Databases</b> within <b>Databases</b> from the menu on the left-hand side of the display screen. The logical database will display all databases as if they are part of one database, whereas the physical database shows the different nodes within that database.</p>
-            <p><image href="images/admin-browse-logical-database.png" format="image/png"><alt>Browse Logical Database Page</alt></image></p>
+            <p>
+                <image href="images/admin-browse-logical-database.png" format="image/png">
+                    <alt>Browse Logical Database Page</alt>
+                </image>
+            </p>
         </section>
         <section id="browsing-physical-databases">
             <title>Browsing Physical Databases</title>
@@ -18,28 +22,48 @@
                 <li>
                     <p>Two separate databases are available as the root for browsing:</p>
                     <ul>
-                        <li><p><b>XML Store</b> — stores users and patient records for all installed applications.</p></li>
-                        <li><p><b>Audit Log</b> — stores audit data for all users.</p></li>
+                        <li>
+                            <p><b>XML Store</b> — stores users and patient records for all installed applications.</p>
+                        </li>
+                        <li>
+                            <p><b>Audit Log</b> — stores audit data for all users.</p>
+                        </li>
                     </ul>
                 </li>
                 <li>
                     <p>Select the database store you wish to browse. For this example, select <b>xmlstore</b>.</p>
-                    <p><image href="images/admin-browse-physical-database.png" format="image/png"><alt>Browse Physical Database Page</alt></image></p>
+                    <p>
+                        <image href="images/admin-browse-physical-database.png" format="image/png">
+                            <alt>Browse Physical Database Page</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>The top level of the <b>xmlstore</b> database contains collections for <b>Applications</b>, <b>Systems</b>, and <b>Users</b>. Any cityEHR installation can support multiple applications and a single set of users, each of whom has access to one or more applications.</p>
-                    <p><image href="images/admin-browse-physical-xmlstore.png" format="image/png"><alt>browse Physical Database "xmlstore" Page</alt></image></p> 
+                    <p>
+                        <image href="images/admin-browse-physical-xmlstore.png" format="image/png">
+                            <alt>browse Physical Database "xmlstore" Page</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
-                    <p>Click on the <b>users</b> link to view a list of all registered users. Initially, this will include only the default <b>admin</b> user and any others you imported or created previously.</p> 
+                    <p>Click on the <b>users</b> link to view a list of all registered users. Initially, this will include only the default <b>admin</b> user and any others you imported or created previously.</p>
                 </li>
                 <li>
                     <p>Click on the <b>admin</b> link, then on <b>credentials</b>. Click the binoculars icon at the top right of the viewing panel.</p>
-                    <p><image href="images/view-xmlstore.png" format="image/png"><alt>Viewing "xmlstore" Page Credentials</alt></image></p>
+                    <p>
+                        <image href="images/view-xmlstore.png" format="image/png">
+                            <alt>Viewing "xmlstore" Page Credentials</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>An XML document containing the user details (<i>users.xml</i>) will appear in a new dialogue window.</p>
-                    <p><image href="images/view-xmlstore-dialogue.png" format="image/png"><alt>XML Document of User Details</alt></image></p>
+                    <p>
+                        <image href="images/view-xmlstore-dialogue.png" format="image/png">
+                            <alt>XML Document of User Details</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>You can download the XML to view it in a text editor.</p>
@@ -47,25 +71,41 @@
                 <li>
                     <p>Return to the top level of the <b>xmlstore</b> by clicking the back button located next to the database selection drop-down 
                         (not the browser's back button).</p>
-                    <p><image href="images/view-xmlstore-return-button.png" format="image/png"><alt>Returning "xmlstore" Top Level by Clicking the Back Button</alt></image></p>
+                    <p>
+                        <image href="images/view-xmlstore-return-button.png" format="image/png">
+                            <alt>Returning "xmlstore" Top Level by Clicking the Back Button</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Click on the <b>applications</b> link, then the link for <b>ISO-13606-EHR_Extract-cityEHR</b>.</p>
                 </li>
                 <li>
                     <p>This displays the top-level collections for the default cityEHR application.</p>
-                    <p><image href="images/admin-browse-physical-toplevel.png" format="image/png"><alt>Top-Level Collections for the Default cityEHR Application</alt></image></p>
+                    <p>
+                        <image href="images/admin-browse-physical-toplevel.png" format="image/png">
+                            <alt>Top-Level Collections for the Default cityEHR Application</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Click on the <b>records</b> link to see a list of patients with stored records for this application.</p>
                 </li>
                 <li>
                     <p>Click on a patient's link to view a list of timestamped compositions (XML documents in HL7 CDA format) representing the events stored in their record.</p>
-                    <p><image href="images/admin-browse-physical-timestamp.png" format="image/png"><alt>Patient Timestamped Compositions</alt></image></p>
+                    <p>
+                        <image href="images/admin-browse-physical-timestamp.png" format="image/png">
+                            <alt>Patient Timestamped Compositions</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Click on a timestamp, then on the binoculars icon to view an HL7 CDA document for the selected event.</p>
-                    <p><image href="images/admin-browse-physical-timestamp-xml.png" format="image/png"><alt>HL7 CDA Document for Selected Event</alt></image></p>
+                    <p>
+                        <image href="images/admin-browse-physical-timestamp-xml.png" format="image/png">
+                            <alt>HL7 CDA Document for Selected Event</alt>
+                        </image>
+                    </p>
                 </li>
                 <li>
                     <p>Continue exploring the database, such as the <b>ISO-13606-EHR_Extract-cityEHR</b> collection, to view contents stored for the information model (OWL XML files) and the system configuration (templates for forms, letters, and data dictionary).</p>
