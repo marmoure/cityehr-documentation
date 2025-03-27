@@ -14,26 +14,26 @@
             <p><image href="images/log-on-page.png" format="image/png"><alt>cityEHR Log-on Page</alt></image></p>
             <p>Upon your first log-on, cityEHR prompts you to build a default application. This process generates an example information model and configuration. Choose <b>'Build Default Application'</b> to proceed. Alternatively, you may start with an empty database, but note that some features (e.g., Dashboard elements) may not display without default information models.</p>
             <p><image href="images/initialize-new-cityehr-installation.png" format="image/png"><alt>Initialize New cityEHR Installation</alt></image></p>
-            <p></p>
+            <p/>
             <p>cityEHR will now run through a sequence of steps to build the default application; while this is in progress the screen will look like the one displayed in the Figure below. It take a minute or so for this process to complete, so you will need to wait while before continuing.</p>
-            <p></p>
+            <p/>
             <p><image href="images/default-app-sequence-steps.png" format="image/png"><alt>Default Application Sequence Steps</alt></image></p>
-            <p></p>
+            <p/>
             <p>After the default application has been built during your first log-on, and for every other time you log on, the screen will be as shown in the Figure below, after you have authenticated:</p>
-            <p></p>
+            <p/>
             <p><image href="images/post-authentication-page.png" format="image/png"><alt>Post Authentication Page</alt></image>
             </p>
-            <p></p>
+            <p/>
             <p>Press the <b>Start</b> button to move to the default home page, which is pre-configured to be the dashboard page, as shown in the figure below</p>
             <p>The Dashboard shows a summary of the overall status of the cityEHR application, which ships by default with the base installation. There is one user registered (the 'admin' user you logged in as) and no patients (so the total patients is zero, there are no clinical documents recorded and no documents in progress).</p>
             <p><b>Note: </b>The number of Information Models shown in the dashboard. If this number is zero (0) then the default application was not loaded properly when you ran cityEHR for the first time (probably because you selected to "Use Empty Database").</p>
-            <p></p>
+            <p/>
             <p><image href="images/default-home-page-dashboard.png" format="image/png"><alt>Default Home-page Dashboard</alt></image>
             </p>
-            <p></p>
+            <p/>
             <p>The Dashboard is your first glimpse of the pages in cityEHR, which can either be non-patient (like the Dashboard), cross-patient (ex. Patient Search page) or patient specific (view of the record for a patient, as identified in the Patient Label)</p>
             <p>Whichever type, the general layout of all pages in the cityEHR system is the same, as shown in the figure below.</p>
-            <p></p>
+            <p/>
             <p><image href="images/system-page-layout.png" format="image/png"><alt>System Page Layout</alt></image>
             </p>
         </section>
@@ -122,10 +122,10 @@
             <title>Session Time Out</title>
             <p>The cityEHR session is set to time out after a period on inactivity – this is controlled by the underlying session management of the Tomcat Application Server. If such a timeout occurs you will see an error dialogue which allows you to restart the application.</p>
             <p><image href="images/session-timeout-dialogue.png" format="image/png"><alt>Session Time Out Dialogue</alt></image></p>
-            <p>  </p>
+            <p/>
             <p>In addition, there is a session page load time limit which restricts the ability to refresh pages using the browser <b>reload current page</b> button. This limit is set by default at 10 minutes, but can be changed in the Admin page (System Parameters) if necessary. A change from the duration P10M (10 minutes) to PT1M (1 minute) is shown in the figure below.</p>
             <p><image href="images/changing-page-load-time.png" format="image/png"><alt>Changing the Page Load Timeout on the Administration Page</alt></image></p>
-                <p>   </p>
+                <p/>
             <p>If the browser reload page button is pressed within this time limit, then the page will reload as requested; outside the time limit the session will simply return to the sign on page. This means that it is not possible to copy and paste the URL of a cityEHR session or to bookmark a page (the URL will be invalid once the session page load time limit has expired).</p>
             <p>Logging in after a session has expired (i.e. a session that was not Quit by the user) will prompt for the session to be resumed at the point the previous session timed out or was aborted.</p>
             <p><image href="images/resume-session-prompt.png" format="image/png"><alt>Prompt to Resume Session on the Sign On Page</alt></image></p>
