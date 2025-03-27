@@ -2,7 +2,7 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD LIGHTWEIGHT DITA Topic//EN" "topic.dtd">
 <topic id="verify-install">
     <title>Verifying the installation</title>
-    <shortdesc> This chapter ensures cityEHR is correctly installed and accessible. It guides users through logging in with default credentials, building the default application, and navigating the Dashboard to confirm the setup. Additional steps include reloading the default application, enabling debug mode to explore cityEHR's underlying structures, and managing session timeouts.</shortdesc>
+    <shortdesc> This chapter ensures <b>cityEHR</b> is correctly installed and accessible. It guides users through logging in with default credentials, building the default application, and navigating the Dashboard to confirm the setup. Additional steps include reloading the default application, enabling debug mode to explore cityEHR's underlying structures, and managing session timeouts.</shortdesc>
     <body>
         <section id="log-on">
             <title>Log On</title>
