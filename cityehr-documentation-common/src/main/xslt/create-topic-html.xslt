@@ -184,7 +184,7 @@
     <xsl:variable name="petal-source-file-uri-tokens" select="tokenize($petal-source-file-uri, concat($petal-github-repo-name, '/'))" />
     <xsl:variable name="petal-source-file" select="$petal-source-file-uri-tokens[last()]" />
     <xsl:variable name="petal-webpage-filename" select="hcom:dita-filename-to-html(com:filename($petal-source-file-uri))" />
-    <xsl:sequence select="concat($petal-api-url, '?ghrepo=', $petal-github-org-name, '/', $petal-github-repo-name, '&amp;source=', $petal-source-file, '&amp;branch=', $petal-github-branch, '&amp;referer=', string-join(($petal-referrer-base-url, $petal-referrer-sub-folder, $petal-webpage-filename), '/'))" />
+    <xsl:sequence select="concat($petal-api-url, '?ghrepo=', $petal-github-org-name, '/', $petal-github-repo-name, '&amp;source=', $petal-source-file, '&amp;branch=', $petal-github-branch, '&amp;referrer=', string-join(($petal-referrer-base-url, $petal-referrer-sub-folder, $petal-webpage-filename), '/'))" />
   </xsl:function>
 
 </xsl:stylesheet>
