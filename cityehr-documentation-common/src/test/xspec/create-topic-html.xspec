@@ -36,7 +36,7 @@
       <x:param name="petal-referrer-base-url" as="xs:string">https://evolvedbinary.github.io/cityehr-documentation</x:param>
       <x:param name="petal-referrer-sub-folder" as="xs:string">quick-start-guide</x:param>
     </x:call>
-    <x:expect label="Correct Petal Edit URL" select="'https://dev.petal.evolvedbinary.com?ghrepo=evolvedbinary/cityehr-documentation&amp;source=cityehr-quick-start-guide/src/main/lwdita/quick-start-guide/verify-install.dita&amp;branch=develop&amp;referer=https://evolvedbinary.github.io/cityehr-documentation/quick-start-guide/verify-install.html'"/>
+    <x:expect label="Correct Petal Edit URL" select="'https://dev.petal.evolvedbinary.com?ghrepo=evolvedbinary/cityehr-documentation&amp;source=cityehr-quick-start-guide/src/main/lwdita/quick-start-guide/verify-install.dita&amp;branch=develop&amp;referrer=https://evolvedbinary.github.io/cityehr-documentation/quick-start-guide/verify-install.html'"/>
   </x:scenario>
   
 </x:description>
