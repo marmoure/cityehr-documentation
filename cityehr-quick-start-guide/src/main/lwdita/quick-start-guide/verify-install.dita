@@ -5,7 +5,7 @@
     <shortdesc> This chapter ensures cityEHR is correctly installed and accessible. It guides users through logging in with default credentials, building the default application, and navigating the Dashboard to confirm the setup. Additional steps include reloading the default application, enabling debug mode to explore cityEHR's underlying structures, and managing session timeouts.</shortdesc>
     <body>
         <section id="log-on">
-            <title>Log On</title>
+            <title>Log On testing one person changes in this title</title>
             <p>If cityEHR is installed on Apache Tomcat, you can access the log-on page using the Firefox web browser. On a local machine, use the URL: <i>http://localhost:8080/cityehr</i>. If running on a remote server, replace 'localhost' with your server's IP address.</p>
             <p><b>Note that cityEHR 1.7 must be accessed using Firefox only (IE 11, Edge, Chrome and Safari will be supported from version 2.0 onwards).</b></p>
             <p>The base cityEHR installation has a single default user set up with the credentials;</p>
